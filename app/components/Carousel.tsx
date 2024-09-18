@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel as UICarousel,
@@ -30,7 +31,7 @@ const CustomCarousel = () => {
                       <CardContent className="p-0">
                         {" "}
                         {/* Remove padding */}
-                        <img
+                        <Image
                           src={imageSrc}
                           alt={`Slide ${index + 1}`}
                           className="w-full h-[350px] object-cover rounded-xl"

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { FaHeart } from "react-icons/fa";
 const Content = () => {
   return (
@@ -14,7 +15,7 @@ const Content = () => {
         <div className="flex justify-center items-center ml-32 mt-1">
           <div className="flex">
             <div>
-              <img
+              <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
                 alt=""
                 className="h-40 w-60"
@@ -32,7 +33,7 @@ const Content = () => {
               </p>
               <p>Quận Cẩm Lệ,Đà Nẵng</p>
               <div className="flex">
-                <img
+                <Image
                   src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/428603879_3699291333727981_8450238390845543097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF8eAl4DqSiHc45WD_3ZUa0Yj2_k1pIrCxiPb-TWkisLKdt4xrCZnSawKeji-j5xGqR90NFt9JrVnVNHzicN-9h&_nc_ohc=rnzU9zsG6hIQ7kNvgH4NySx&_nc_ht=scontent.fdad2-1.fna&oh=00_AYBDhh4h13M-hZxhzak3Cj8YDQ3k8_1KhOMah4vOdofdpA&oe=66F0B305"
                   alt=""
                   className="w-8 h-[25px] rounded-2xl"
@@ -45,7 +46,7 @@ const Content = () => {
 
           <div className="flex">
             <div>
-              <img
+              <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCYDLB-CiKAPAXAB0Y6nxSC-FNC7zWiC4t6Xbc4qTnzKl8crdloIAl2zFVNPdRjqEg7U&usqp=CAU"
                 alt=""
                 className="h-40 w-60"
@@ -63,7 +64,7 @@ const Content = () => {
               </p>
               <p>Quận Liên Chiểu,Đà Nẵng</p>
               <div className="flex">
-                <img
+                <Image
                   src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/344339825_940706537135916_4715272773614571204_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeEmZBlm2Y5u9jYqfyaIJCi3YkYah1-pKXBiRhqHX6kpcHiEYymrN0jehiJZrdjuXjUBW8vYuIPCENN4RMU8xFwI&_nc_ohc=vwTnBg2PgcAQ7kNvgHLKPab&_nc_ht=scontent.fdad1-4.fna&_nc_gid=ACO6UpNNl7WIxKnuqWbAa69&oh=00_AYCUKD2ql916ZtN6BAE1KPfHIFamThOP_wfZRXPTRlmFYA&oe=66F0C596"
                   alt=""
                   className="w-8 h-[25px] rounded-2xl"
@@ -87,7 +88,7 @@ const Content = () => {
         <div className="flex justify-center items-center ml-32 mt-1">
           <div className="flex">
             <div>
-              <img
+              <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
                 alt=""
                 className="h-40 w-60"
@@ -105,7 +106,7 @@ const Content = () => {
               </p>
               <p>Quận Cẩm Lệ,Đà Nẵng</p>
               <div className="flex">
-                <img
+                <Image
                   src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/428603879_3699291333727981_8450238390845543097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF8eAl4DqSiHc45WD_3ZUa0Yj2_k1pIrCxiPb-TWkisLKdt4xrCZnSawKeji-j5xGqR90NFt9JrVnVNHzicN-9h&_nc_ohc=rnzU9zsG6hIQ7kNvgH4NySx&_nc_ht=scontent.fdad2-1.fna&oh=00_AYBDhh4h13M-hZxhzak3Cj8YDQ3k8_1KhOMah4vOdofdpA&oe=66F0B305"
                   alt=""
                   className="w-8 h-[25px] rounded-2xl"
@@ -118,7 +119,7 @@ const Content = () => {
 
           <div className="flex">
             <div>
-              <img
+              <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCYDLB-CiKAPAXAB0Y6nxSC-FNC7zWiC4t6Xbc4qTnzKl8crdloIAl2zFVNPdRjqEg7U&usqp=CAU"
                 alt=""
                 className="h-40 w-60"
@@ -136,7 +137,7 @@ const Content = () => {
               </p>
               <p>Quận Liên Chiểu,Đà Nẵng</p>
               <div className="flex">
-                <img
+                <Image
                   src="https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/344339825_940706537135916_4715272773614571204_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeEmZBlm2Y5u9jYqfyaIJCi3YkYah1-pKXBiRhqHX6kpcHiEYymrN0jehiJZrdjuXjUBW8vYuIPCENN4RMU8xFwI&_nc_ohc=vwTnBg2PgcAQ7kNvgHLKPab&_nc_ht=scontent.fdad1-4.fna&_nc_gid=ACO6UpNNl7WIxKnuqWbAa69&oh=00_AYCUKD2ql916ZtN6BAE1KPfHIFamThOP_wfZRXPTRlmFYA&oe=66F0C596"
                   alt=""
                   className="w-8 h-[25px] rounded-2xl"
