@@ -18,44 +18,47 @@ const images = [
 
 const CustomCarousel = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div className="mb-40 mr-20 w-[600px] ">
-        <UICarousel className="w-full mx-10  ">
-          <CarouselContent>
-            {images.map((imageSrc, index) => (
-              <CarouselItem key={index} className="w-full">
-                <div className="p-1">
-                  <Card className="w-full h-full rounded-xl border border-gray-300">
-                    <CardContent className="p-0">
-                      {" "}
-                      {/* Remove padding */}
-                      <img
-                        src={imageSrc}
-                        alt={`Slide ${index + 1}`}
-                        className="w-full h-[350px] object-cover rounded-xl"
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </UICarousel>
+    <div>
+      <div className=" flex justify-center items-center">
+        <div className="mr-20 w-[600px] ">
+          <UICarousel className="w-full mx-10  ">
+            <CarouselContent>
+              {images.map((imageSrc, index) => (
+                <CarouselItem key={index} className="w-full">
+                  <div className="p-1">
+                    <Card className="w-full h-full rounded-xl border border-gray-300">
+                      <CardContent className="p-0">
+                        {" "}
+                        {/* Remove padding */}
+                        <img
+                          src={imageSrc}
+                          alt={`Slide ${index + 1}`}
+                          className="w-full h-[350px] object-cover rounded-xl"
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </UICarousel>
+        </div>
+        <div className="">
+          <img
+            src="https://bds123.cdn.static123.com/images/thumbs/900x600/fit/2024/06/29/f03359771c88aa9e49bd5ac477ed7260_1719624650.jpg"
+            alt=""
+            className="w-[400px] h-[150px] ml-28 object-cover rounded-xl"
+          />
+          <img
+            src="https://bds123.cdn.static123.com/images/thumbs/900x600/fit/2023/09/27/70_1695787728.jpg"
+            alt=""
+            className="w-[400px] h-[200px] ml-28 mt-2 rounded-xl"
+          />
+        </div>
       </div>
-      <div className="mb-36">
-        <img
-          src="https://bds123.cdn.static123.com/images/thumbs/900x600/fit/2024/06/29/f03359771c88aa9e49bd5ac477ed7260_1719624650.jpg"
-          alt=""
-          className="w-[400px] h-[150px] ml-28 object-cover rounded-xl"
-        />
-        <img
-          src="https://bds123.cdn.static123.com/images/thumbs/900x600/fit/2023/09/27/70_1695787728.jpg"
-          alt=""
-          className="w-[400px] h-[200px] ml-28 mt-2 rounded-xl"
-        />
-      </div>
+      <div className="border-t h-1 border-[#1266DD]  mt-5"></div>
     </div>
   );
 };

@@ -61,7 +61,7 @@ const Header = () => {
 
       <div
         style={{ backgroundColor: "#DFBF19" }}
-        className=" w-[1200px] mx-auto h-10 mt-8 rounded-xl  flex justify-center items-center gap-10"
+        className=" w-[1200px] mx-auto h-10 mt-8 rounded-xl mb-10  flex justify-center items-center gap-10"
       >
         <div className="w-56  ">
           <select name="" id="" className="w-56 rounded-xl">
