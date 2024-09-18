@@ -45,7 +45,7 @@ const Content = () => {
           <div className="flex">
             <div>
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCYDLB-CiKAPAXAB0Y6nxSC-FNC7zWiC4t6Xbc4qTnzKl8crdloIAl2zFVNPdRjqEg7U&usqp=CAU"
                 alt=""
                 className="h-40 w-60"
               />
@@ -53,14 +53,14 @@ const Content = () => {
             <div className="ml-1">
               <p className="w-[50%] text-[#FF0000] font-semibold">
                 {" "}
-                GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG, UEF - AN NINH,
-                TIỆN NGHI - TT…
+                GẦN TRƯỜNG ĐH DUY TÂN (1km), SƯ PHẠM (2km).... - AN NINH, TIỆN
+                NGHI - TT…
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
-                4.5 triệu/tháng{" "}
+                3.0 triệu/tháng{" "}
                 <span className="text-black font-thin">30m2</span>
               </p>
-              <p>Quận Cẩm Lệ,Đà Nẵng</p>
+              <p>Quận Liên Chiểu,Đà Nẵng</p>
               <div className="flex">
                 <img
                   src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/428603879_3699291333727981_8450238390845543097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF8eAl4DqSiHc45WD_3ZUa0Yj2_k1pIrCxiPb-TWkisLKdt4xrCZnSawKeji-j5xGqR90NFt9JrVnVNHzicN-9h&_nc_ohc=rnzU9zsG6hIQ7kNvgH4NySx&_nc_ht=scontent.fdad2-1.fna&oh=00_AYBDhh4h13M-hZxhzak3Cj8YDQ3k8_1KhOMah4vOdofdpA&oe=66F0B305"
