@@ -47,12 +47,12 @@ const CustomCarousel = () => {
           </UICarousel>
         </div>
         <div className="">
-          <img
+          <Image
             src="https://bds123.cdn.static123.com/images/thumbs/900x600/fit/2024/06/29/f03359771c88aa9e49bd5ac477ed7260_1719624650.jpg"
             alt=""
             className="w-[400px] h-[150px] ml-28 object-cover rounded-xl"
           />
-          <img
+          <Image
             src="https://bds123.cdn.static123.com/images/thumbs/900x600/fit/2023/09/27/70_1695787728.jpg"
             alt=""
             className="w-[400px] h-[200px] ml-28 mt-2 rounded-xl"

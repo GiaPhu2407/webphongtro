@@ -4,7 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { GrLogin } from "react-icons/gr";
 import { CiSearch } from "react-icons/ci";
-import Image from "next/image";
+
 const Header = () => {
   return (
     <div>
