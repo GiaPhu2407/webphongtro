@@ -36,7 +36,10 @@ const Header = () => {
         </div>
       </div>
       {/* Nvarbar */}
-      <div className="bg-blue-600 w-full h-10 mt-2 flex justify-center items-center">
+      <div
+        style={{ backgroundColor: "#1266DD" }}
+        className=" w-full h-10 mt-2 flex justify-center items-center"
+      >
         <div className="flex  content-center gap-12">
           <a href="" className=" hover:bg-red-600 py-2 px-2">
             Trang Chủ
@@ -56,10 +59,15 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="bg-yellow-600 w-[1200px] mx-auto h-10 mt-8 rounded-xl  flex justify-center items-center gap-10">
-        <div className="bg-white w-56">
-          <select name="" id="" className="w-56">
-            <option value="">Chọn giá</option>
+      <div
+        style={{ backgroundColor: "#DFBF19" }}
+        className=" w-[1200px] mx-auto h-10 mt-8 rounded-xl  flex justify-center items-center gap-10"
+      >
+        <div className="w-56  ">
+          <select name="" id="" className="w-56 rounded-xl">
+            <option value="" className="text-xl">
+              Chọn giá
+            </option>
             <option value="">1.000.000</option>
             <option value="">1.500.000</option>
             <option value="">2.000.000</option>
@@ -69,8 +77,8 @@ const Header = () => {
             <option value="">4.000.000</option>
           </select>
         </div>
-        <div className="bg-white w-56">
-          <select name="" id="" className="w-56">
+        <div className=" w-56 ">
+          <select name="" id="" className="w-56 rounded-xl">
             <option value="">Chọn diện tích</option>
             <option value="">36m2</option>
             <option value="">40m2</option>
@@ -87,7 +95,8 @@ const Header = () => {
             name=""
             id=""
             placeholder="Tìm Kiếm......."
-            className="bg-blue-600 pl-5 text-white font-medium"
+            style={{ backgroundColor: "#0071C2" }}
+            className="bg-blue-600 pl-5 text-white font-medium rounded-xl"
           />
         </div>
       </div>
