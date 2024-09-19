@@ -158,7 +158,7 @@ const Content = () => {
         <p className="absolute mt-20 text-2xl font-semibold text-center">
           Tại sao lại chọn PhongTroSinhVienTop.com?
         </p>
-        <p className="absolute mt-40 text-center mx-auto">
+        <p className="absolute mt-40 text-center w-[80%] mx-auto ">
           Chúng tôi biết bạn có rất nhiều lựa chọn, nhưng
           Phongtrosinhvientop.com tự hào là trang web đứng top google về các từ
           khóa: cho thuê phòng trọ, nhà trọ, thuê nhà nguyên căn, cho thuê căn

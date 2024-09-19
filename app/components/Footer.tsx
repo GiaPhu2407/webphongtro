@@ -7,13 +7,13 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <div className="mt-10">
-        <a href="" className="text-2xl font-bold ml-5 mt-10">
+      <div className="mt-10 text-center">
+        <a href="" className="text-2xl font-bold ml-5 mt-10 mr-[1000px]">
           <span className="text-blue-600 ">PhongTroSinhVien</span>
           <span className="text-red-600">Top</span>.com
         </a>
       </div>
-      <div className="flex justify-around mt-5 ">
+      <div className="flex justify-center gap-44 mt-5  ">
         <div>
           <p> Về PHONGTROSINHVIENTOP.COM</p>
           <ul className="list-disc ml-7">
@@ -55,9 +55,59 @@ const Footer = () => {
           </div>
           <p className="mt-5">Phương thức thanh toán</p>
           <div className="flex ">
-            <img src="/img/icon.png" alt="" className=""/>
+            <img src="/img/icon.png" alt="" className="" />
           </div>
         </div>
+      </div>
+      <div className="flex justify-center gap-20 mt-5">
+        <p>Cùng hệ thống LBKCorp:</p>
+        <Link href={""}>
+          <img
+            src="https://phongtro123.com/images/logo-bds123.svg"
+            alt=""
+            className="w-40 h-7"
+          />
+        </Link>
+        <Link href={""}>
+          <img
+            src="https://phongtro123.com/images/logo-chothuenha.svg"
+            alt=""
+            className="w-40 h-7"
+          />
+        </Link>
+        <Link href={""}>
+          <img
+            src="https://phongtro123.com/images/logo-thuecanho.svg"
+            alt=""
+            className="w-40 h-7"
+          />
+        </Link>
+        <Link href={""}>
+          <img
+            src="https://phongtro123.com/images/logo-phongtro.svg"
+            alt=""
+            className="w-40 h-7 "
+          />
+        </Link>
+      </div>
+
+      <p className="text-center mt-6">
+        CÔNG TY TNHH LBKCORP <br />
+        Tổng đài CSKH: 0917686101 <br />
+        Copyright © 2015 - 2024 Phongtro123.com <br />
+        Email: cskh.phongtro123@gmail.com <br />
+        Địa chỉ: Căn 02.34, Lầu 2, Tháp 3, The Sun Avenue, Số 28 Mai Chí Thọ,
+        Phường An Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam <br />
+        Giấy phép đăng ký kinh doanh số 0313588502 do Sở kế hoạch và Đầu tư
+        thành phố Hồ Chí Minh cấp ngày 24 tháng 12 năm 2015.
+      </p>
+      <div>
+        <Link href={""}>
+          <img src="/img/logodangky.png" alt="" />
+        </Link>
+        <Link href={""}>
+          <img src="/img/logodmca.png" alt="" />
+        </Link>
       </div>
     </div>
   );
