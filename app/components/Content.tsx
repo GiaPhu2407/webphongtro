@@ -173,7 +173,7 @@ const Content = () => {
           Bạn đang có phòng trọ / căn hộ cho thuê? <br />
           Không phải lo tìm người cho thuê, phòng trống kéo dài
         </p>
-        <button className="absolute bg-[#F73859] px-5 py-3 rounded-xl mt-96 text-white">
+        <button className="absolute bg-[#F73859] px-5 py-3 rounded-xl mt-96  text-white hover:underline">
           Đăng ký ngay
         </button>
       </div>

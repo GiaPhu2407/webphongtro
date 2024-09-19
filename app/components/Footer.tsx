@@ -9,8 +9,9 @@ const Footer = () => {
     <div>
       <div className="mt-10 text-center">
         <a href="" className="text-2xl font-bold ml-5 mt-10 mr-[1000px]">
-          <span className="text-blue-600 ">PhongTroSinhVien</span>
-          <span className="text-red-600">Top</span>.com
+          <span className="text-[#1C30E7] ">PhongTroSinhVien</span>
+          <span className="text-[#E71C1C]">Top</span>
+          <span className="text-[#8D90AC]">.com</span>
         </a>
       </div>
       <div className="flex justify-center gap-44 mt-5  ">

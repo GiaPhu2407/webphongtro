@@ -11,8 +11,9 @@ const Header = () => {
       <div className="flex ml-10 gap-20 mt-1 justify-center items-center">
         <div>
           <a href="" className="text-2xl font-bold">
-            <span className="text-blue-600 ">PhongTroSinhVien</span>
-            <span className="text-red-600">Top</span>.com
+            <span className="text-[#1C30E7] ">PhongTroSinhVien</span>
+            <span className="text-[#E71C1C]">Top</span>
+            <span className="text-[#8D90AC]">.com</span>
           </a>
         </div>
         <div className="flex ml-36">
@@ -32,7 +33,7 @@ const Header = () => {
           </a>
         </div>
         <div>
-          <button className="bg-red-500 px-5 py-2 rounded-xl hover:bg-red-700">
+          <button className="bg-[#F73859] px-5 py-2 rounded-xl hover:bg-red-700">
             Đăng tin +
           </button>
         </div>
