@@ -9,7 +9,7 @@ const FormLogin = () => {
           Đăng Nhập
         </p>
         <form className="absolute top-32 left-24 ">
-          <p className="mt-2 texl-xl ">Tên tài khoản</p>
+          <p className="mt-2 text-xl ">Tên tài khoản</p>
           <input
             type="text"
             placeholder="Tên tài khoản"
