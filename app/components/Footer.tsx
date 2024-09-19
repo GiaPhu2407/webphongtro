@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
-import { SiZalo } from "react-icons/si";
+
 import { AiFillTwitterCircle } from "react-icons/ai";
 import Link from "next/link";
 const Footer = () => {
