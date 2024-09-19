@@ -9,14 +9,14 @@ const FormLogin = () => {
           Đăng Nhập
         </p>
         <form className="absolute top-32 left-24 ">
-          <p className="mt-2 font-serif">Tên tài khoản</p>
+          <p className="mt-2 texl-xl ">Tên tài khoản</p>
           <input
             type="text"
             placeholder="Tên tài khoản"
             className="mt-7 py-1 w-[400px]"
           />
           <br />
-          <p className="mt-10 font-serif">Mật khẩu</p>
+          <p className="mt-10 text-xl">Mật khẩu</p>
           <input
             type="password"
             placeholder="Mật khẩu"

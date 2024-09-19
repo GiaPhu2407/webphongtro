@@ -21,9 +21,9 @@ const Header = () => {
         </div>
         <div className="flex">
           <VscAccount className="mt-[3px]" />
-          <a href="" className="ml-1">
+          <Link className="ml-1" href={"/ShowLogin"}>
             Đăng nhập
-          </a>
+          </Link>
         </div>
         <div className="flex ">
           <GrLogin className="mt-1" />

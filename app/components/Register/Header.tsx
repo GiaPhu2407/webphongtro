@@ -3,6 +3,7 @@ import { VscAccount } from "react-icons/vsc";
 import { GrLogin } from "react-icons/gr";
 
 import { FaRegHeart } from "react-icons/fa";
+import Link from "next/link";
 const Header = () => {
   return (
     <div>
@@ -20,9 +21,9 @@ const Header = () => {
         </div>
         <div className="flex">
           <VscAccount className="mt-[3px]" />
-          <a href="" className="ml-1">
+          <Link className="ml-1" href={"/ShowLogin"}>
             Đăng nhập
-          </a>
+          </Link>
         </div>
         <div className="flex ">
           <GrLogin className="mt-1" />
