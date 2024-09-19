@@ -1,11 +1,8 @@
 import React from "react";
-
-import { FaRegHeart } from "react-icons/fa";
 import { VscAccount } from "react-icons/vsc";
 import { GrLogin } from "react-icons/gr";
-import { CiSearch } from "react-icons/ci";
-import Link from "next/link";
 
+import { FaRegHeart } from "react-icons/fa";
 const Header = () => {
   return (
     <div>
@@ -23,9 +20,9 @@ const Header = () => {
         </div>
         <div className="flex">
           <VscAccount className="mt-[3px]" />
-          <Link className="ml-1" href={"/ShowLogin"}>
+          <a href="" className="ml-1">
             Đăng nhập
-          </Link>
+          </a>
         </div>
         <div className="flex ">
           <GrLogin className="mt-1" />
@@ -60,38 +57,6 @@ const Header = () => {
           <a href="" className=" hover:bg-red-600 py-2 px-2">
             Liên hệ
           </a>
-        </div>
-      </div>
-
-      <div
-        style={{ backgroundColor: "#DFBF19" }}
-        className=" w-[1200px] mx-auto h-10 mt-8 rounded-xl mb-10  flex justify-center items-center gap-10"
-      >
-        <div className="w-56  ">
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Giá"
-            className="bg-[#FFFFFF] pl-5 text-white font-medium rounded-xl mr-10"
-          />
-        </div>
-        <div className=" w-56 ">
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Diện tích"
-            className="bg-[#FFFFFF] pl-5 text-white font-medium rounded-xl"
-          />
-        </div>
-
-        <div className="relative ml-72 flex  ">
-          {/* <p className="pl-20 text-white font-medium">Tìm kiếm</p> */}
-          <button className=" bg-[#0071C2] -bottom-3 -py-5  absolute whitespace-nowrap text-white  font-medium rounded-xl px-14 ">
-            <CiSearch className=" absolute top-[2px] left-0 text-white text-xl " />
-            Tim kiếm
-          </button>
         </div>
       </div>
     </div>

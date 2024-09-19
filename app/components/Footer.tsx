@@ -102,12 +102,20 @@ const Footer = () => {
         Giấy phép đăng ký kinh doanh số 0313588502 do Sở kế hoạch và Đầu tư
         thành phố Hồ Chí Minh cấp ngày 24 tháng 12 năm 2015.
       </p>
-      <div>
+      <div className="flex justify-center items-center">
         <Link href={""}>
-          <img src="/img/logodangky.png" alt="" />
+          <img
+            src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoCCDV.png"
+            alt=""
+            className="w-32 h-12"
+          />
         </Link>
         <Link href={""}>
-          <img src="/img/logodmca.png" alt="" />
+          <img
+            src="https://images.dmca.com/Badges/dmca-badge-w250-2x1-04.png?ID=c20c5527-4840-484e-adc5-37179174f55b"
+            alt=""
+            className="w-24 h-10"
+          />
         </Link>
       </div>
     </div>
