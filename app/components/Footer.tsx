@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { SiZalo } from "react-icons/si";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import Link from "next/link";
 const Footer = () => {
   return (
     <div>
@@ -37,11 +38,24 @@ const Footer = () => {
         </div>
         <div>
           <p>Liên hệ với chúng tôi</p>
-          <div className="flex">
-            <FaFacebook />
-            <IoLogoYoutube />
-            <SiZalo />
-            <AiFillTwitterCircle />
+          <div className="flex gap-4">
+            <Link href={""}>
+              <div>
+                <FaFacebook className="text-blue-700 text-2xl" />
+              </div>
+            </Link>
+
+            <IoLogoYoutube className="text-red-600 text-2xl" />
+            <img
+              src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png"
+              alt=""
+              className="w-5 h-5 mt-[2px]"
+            />
+            <AiFillTwitterCircle className="text-blue-500 text-2xl" />
+          </div>
+          <p className="mt-5">Phương thức thanh toán</p>
+          <div className="flex ">
+            <img src="/img/icon.png" alt="" className=""/>
           </div>
         </div>
       </div>
