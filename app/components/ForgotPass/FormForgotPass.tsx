@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const FormRegister = () => {
+const FormForgotPass = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="bg-[#E4D3D3] w-[1073px] h-[923px] relative top-10 left-[140px] rounded-xl mr-64">
@@ -30,7 +30,6 @@ const FormRegister = () => {
             className=" mt-6 py-1 w-[400px]"
           />
           <br />
-          
 
           <button
             type="submit"
@@ -55,4 +54,4 @@ const FormRegister = () => {
   );
 };
 
-export default FormRegister;
+export default FormForgotPass;

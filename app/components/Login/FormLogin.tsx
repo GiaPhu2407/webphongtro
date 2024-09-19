@@ -30,7 +30,7 @@ const FormLogin = () => {
             Đăng Nhập
           </button>
           <Link
-            href={""}
+            href={"/ShowForgotPass"}
             className="absolute top-[400px] left-12 text-[#00C2FF] underline"
           >
             Quên mật khẩu?

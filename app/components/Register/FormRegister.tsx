@@ -59,7 +59,7 @@ const FormRegister = () => {
               href={""}
               className="absolute top-[400px] left-40 text-[#00C2FF] underline"
             >
-              Quên mật khẩu?
+              Đăng Nhập Ngay
             </Link>
             <Link href={""} className="absolute top-[400px]">
               Bạn đã có tài khoản?
