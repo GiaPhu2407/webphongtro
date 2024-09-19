@@ -12,7 +12,7 @@ const FormLogin = () => {
           <p className="mt-2 font-serif">Tên tài khoản</p>
           <input
             type="text"
-            placeholder="Tên đăng nhập"
+            placeholder="Tên tài khoản"
             className="mt-7 py-1 w-[400px]"
           />
           <br />
