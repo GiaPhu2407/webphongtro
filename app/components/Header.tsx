@@ -29,9 +29,9 @@ const Header = () => {
         </div>
         <div className="flex ">
           <GrLogin className="mt-1" />
-          <a href="" className="ml-1">
+          <Link className="ml-1" href={"/ShowRegister"}>
             Đăng ký
-          </a>
+          </Link>
         </div>
         <div>
           <button className="bg-[#F73859] px-5 py-2 rounded-xl hover:bg-red-700">
