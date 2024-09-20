@@ -32,7 +32,8 @@ const FormForgotPass = () => {
 
           <button
             type="submit"
-            className="absolute bg-[#0071C2] px-96 top-[650px] left-11 py-2 rounded-2xl whitespace-nowrap text-white"
+            className="absolute top-[400px] items-center justify-center px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black 
+            focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
           >
             Gửi
           </button>
