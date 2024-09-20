@@ -153,7 +153,7 @@ const Content = () => {
         <img
           src="https://rungduabaymau.vn/wp-content/uploads/2022/11/bien-my-Khe.jpeg"
           alt=""
-          className="w-full max-w-[1436.96px] h-[500px]  relative opacity-60"
+          className="w-full h-[500px]  relative opacity-60"
         />
         <p className="absolute mt-20 text-2xl font-semibold text-center">
           Tại sao lại chọn PhongTroSinhVienTop.com?

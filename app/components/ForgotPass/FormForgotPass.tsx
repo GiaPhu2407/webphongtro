@@ -3,7 +3,7 @@ import React from "react";
 const FormForgotPass = () => {
   return (
     <div className="flex justify-center items-center">
-      <div className="bg-[#E4D3D3] w-[1073px] h-[923px] relative top-10 left-[140px] rounded-xl mr-64">
+      <div className="w-[1000px] h-[923px] relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10 top-10  mr-64">
         <p className="absolute top-12 left-20 text-2xl font-serif font-normal">
           Quên Mật Khẩu
         </p>
@@ -12,7 +12,7 @@ const FormForgotPass = () => {
           <input
             type="text"
             placeholder="Tên tài khoản"
-            className="mt-7 py-1 w-[400px]"
+            className="mt-7 py-1 w-[400px] "
           />
           <br />
           <p className="mt-10 text-xl">Mật khẩu mới</p>
@@ -24,7 +24,7 @@ const FormForgotPass = () => {
           <br />
           <p className="mt-10  text-xl">Nhập lại mật khẩu</p>
           <input
-            type="number"
+            type="password"
             placeholder="Số Điện Thoại"
             className=" mt-6 py-1 w-[400px]"
           />
