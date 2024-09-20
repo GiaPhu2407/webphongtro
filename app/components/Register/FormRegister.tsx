@@ -5,8 +5,8 @@ const FormRegister = () => {
   return (
     <div className="flex justify-center items-center">
       {/* From Uiverse.io by themrsami */}
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
+      <div className="relative py-1 mt-5 sm:max-w-xl bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl sm:mx-auto">
+        <div className="border-8 border-transparent rounded-xl bg-white dark:bg-gray-900 shadow-xl p-8 m-2 sm:p-10">
           <h1 className="text-3xl font-bold text-center cursor-default dark:text-gray-300 text-gray-900">
             Đăng Ký
           </h1>

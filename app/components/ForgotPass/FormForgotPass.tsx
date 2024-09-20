@@ -1,43 +1,73 @@
+import Link from "next/link";
 import React from "react";
 
 const FormForgotPass = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div className="w-[1000px] h-[923px] relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10 top-10  mr-64">
-        <p className="absolute top-12 left-20 text-2xl font-serif font-normal">
-          Quên Mật Khẩu
-        </p>
-        <form className="absolute top-40 left-24 ">
-          <p className="mt-2  text-xl">Tên tài khoản</p>
-          <input
-            type="text"
-            placeholder="Tên tài khoản"
-            className="mt-7 py-1 w-[400px] "
-          />
-          <br />
-          <p className="mt-10 text-xl">Mật khẩu mới</p>
-          <input
-            type="password"
-            placeholder="Mật khẩu"
-            className=" mt-6 py-1 w-[400px]"
-          />
-          <br />
-          <p className="mt-10  text-xl">Nhập lại mật khẩu</p>
-          <input
-            type="password"
-            placeholder="Số Điện Thoại"
-            className=" mt-6 py-1 w-[400px]"
-          />
-          <br />
-
-          <button
-            type="submit"
-            className="absolute top-[400px] items-center justify-center px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black 
-            focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black"
+    <div className="flex justify-center items-center mt-5 w-full">
+      <div className="flex justify-center items-center h-full w-full">
+        <div className="grid gap-8 w-full">
+          <section
+            id="back-div"
+            className="relative py-1 pr-4 mt-5 sm:max-w-3xl bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl sm:mx-auto w-full"
           >
-            Gửi
-          </button>
-        </form>
+            <div className="border-10 border-transparent rounded-xl bg-white dark:bg-gray-900 shadow-xl p-10 m-2 sm:p-14 w-full">
+              <h1 className="text-3xl font-bold text-center dark:text-gray-300 text-gray-900">
+                Quên Mật Khẩu
+              </h1>
+              <form action="#" method="post" className="space-y-8">
+                <div>
+                  <label
+                    htmlFor="tên tài khoản"
+                    className="block mb-2 text-xl dark:text-gray-300"
+                  >
+                    Tên tài khoản
+                  </label>
+                  <input
+                    id="email"
+                    className="border p-4 shadow-md dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 border-gray-300 rounded-lg w-[400px] focus:ring-2 focus:ring-blue-500 transition transform hover:scale-105 duration-300"
+                    type="tên tài khoản"
+                    placeholder="Tên tài khoản"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="password"
+                    className="block mb-2 text-xl dark:text-gray-300"
+                  >
+                    Mật khẩu mới
+                  </label>
+                  <input
+                    id="password"
+                    className="border p-4 shadow-md dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 border-gray-300 rounded-lg  w-[400px] focus:ring-2 focus:ring-blue-500 transition transform hover:scale-105 duration-300"
+                    type="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="password"
+                    className="block mb-2 text-xl dark:text-gray-300"
+                  >
+                    Nhập lại mật khẩu mới
+                  </label>
+                  <input
+                    id="password"
+                    className="border p-4 shadow-md dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 border-gray-300 rounded-lg  w-[400px] focus:ring-2 focus:ring-blue-500 transition transform hover:scale-105 duration-300"
+                    type="password"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <button
+                  className=" w-[150px] p-4 mt-6 text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg hover:scale-105 transition transform duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="submit"
+                >
+                  Gửi
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   );
