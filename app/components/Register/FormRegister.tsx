@@ -17,7 +17,7 @@ const FormRegister = () => {
                   className="font-semibold text-sm text-gray-600 pb-1 block"
                   htmlFor="fullname"
                 >
-                  Full Name
+                  Họ tên
                 </label>
                 <input
                   className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
@@ -43,7 +43,7 @@ const FormRegister = () => {
                   className="font-semibold text-sm text-gray-600 pb-1 block"
                   htmlFor="username"
                 >
-                  Username
+                  Tên tài khoản
                 </label>
                 <input
                   className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
@@ -56,7 +56,7 @@ const FormRegister = () => {
                   className="font-semibold text-sm text-gray-600 pb-1 block"
                   htmlFor="password"
                 >
-                  Password
+                  Mật Khẩu
                 </label>
                 <input
                   className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
@@ -69,9 +69,30 @@ const FormRegister = () => {
               <div>
                 <label
                   className="font-semibold text-sm text-gray-600 pb-1 block"
+                  htmlFor="gender"
+                >
+                  Số điện thoại
+                </label>
+                <input
+                  className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  type="password"
+                  id="password"
+                />
+                {/* <select
+                  className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  id="gender"
+                >
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select> */}
+              </div>
+              <div>
+                <label
+                  className="font-semibold text-sm text-gray-600 pb-1 block"
                   htmlFor="dob"
                 >
-                  Date of Birth
+                  Ngày sinh
                 </label>
                 <input
                   className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
@@ -79,24 +100,32 @@ const FormRegister = () => {
                   id="dob"
                 />
               </div>
-              <div>
-                <label
-                  className="font-semibold text-sm text-gray-600 pb-1 block"
-                  htmlFor="gender"
-                >
-                  Gender
-                </label>
-                <select
-                  className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                  id="gender"
-                >
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
-                </select>
+            </div>
+            <div>
+              <p className="font-semibold text-[16px] text-gray-600 pb-1 block">
+                Giới tính
+              </p>
+              <div className="flex gap-10 mt-2 ml-4">
+                <div>
+                  <input type="radio" name="gioitinh" id="gioitinh" />
+                  <label htmlFor="gioitinh" className="ml-2 text-sm">
+                    Nam
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" name="gioitinh" id="gioitinh1" />
+                  <label htmlFor="gioitinh1" className="ml-2 text-sm">
+                    Nữ
+                  </label>
+                </div>
+                <div>
+                  <input type="radio" name="gioitinh" id="gioitinh2" />
+                  <label htmlFor="gioitinh2" className="ml-2 text-sm">
+                    Khác
+                  </label>
+                </div>
               </div>
             </div>
-
             <div className="mt-5">
               <button
                 className="py-2 px-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"

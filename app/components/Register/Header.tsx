@@ -43,19 +43,19 @@ const Header = () => {
         className=" w-full h-10 mt-2 flex justify-center items-center sticky top-0 z-50 "
       >
         <div className="flex  content-center gap-12">
-          <a href="" className=" hover:bg-red-600 py-2 px-2">
+          <a href="" className=" text-white hover:bg-red-600 py-2 px-2">
             Trang Chủ
           </a>
-          <a href="" className=" hover:bg-red-600 py-2 px-2">
+          <a href="" className=" text-white hover:bg-red-600 py-2 px-2">
             Cho thuê phòng trọ
           </a>
-          <a href="" className=" hover:bg-red-600 py-2 px-2">
+          <a href="" className=" text-white hover:bg-red-600 py-2 px-2">
             Giới thiệu{" "}
           </a>
-          <a href="" className=" hover:bg-red-600 py-2 px-2">
+          <a href="" className=" text-white hover:bg-red-600 py-2 px-2">
             Tin Tức
           </a>
-          <a href="" className=" hover:bg-red-600 py-2 px-2">
+          <a href="" className=" text-white hover:bg-red-600 py-2 px-2">
             Liên hệ
           </a>
         </div>
