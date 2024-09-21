@@ -43,12 +43,12 @@ const ForgotPassword = () => {
               required
               className="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <button
-              type="submit"
+            <Link
+              href={"/ShowChangePass"}
               className="mt-4 w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300"
             >
               Gửi yêu cầu
-            </button>
+            </Link>
           </form>
           <p className="text-center text-sm mt-4 text-gray-600">
             <Link href="/login" className="text-green-500 hover:underline">
