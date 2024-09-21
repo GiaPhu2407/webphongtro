@@ -63,17 +63,14 @@ const Header = () => {
         </div>
       </div>
 
-      <div
-        style={{ backgroundColor: "#DFBF19" }}
-        className=" w-[1200px] mx-auto h-10 mt-8 rounded-xl mb-10  flex justify-center items-center gap-10"
-      >
+      <div className=" bg-[#FEBB02] w-[1200px] mx-auto h-10 mt-8 rounded-xl mb-10  flex justify-center items-center gap-10">
         <div className="w-56  ">
           <input
             type="text"
             name=""
             id=""
             placeholder="Giá"
-            className="bg-[#FFFFFF] pl-5 text-white font-medium rounded-xl mr-10"
+            className="bg-[#FFFFFF] absolute right-[1000px] top-[132px]  pl-5 text-black font-medium rounded-xl "
           />
         </div>
         <div className=" w-56 ">
@@ -82,13 +79,13 @@ const Header = () => {
             name=""
             id=""
             placeholder="Diện tích"
-            className="bg-[#FFFFFF] pl-5 text-white font-medium rounded-xl"
+            className="absolute right-[750px] top-[132px] bg-[#FFFFFF] pl-5 text-black font-medium rounded-xl"
           />
         </div>
 
         <div className="relative ml-72 flex  ">
           {/* <p className="pl-20 text-white font-medium">Tìm kiếm</p> */}
-          <button className=" bg-[#0071C2] -bottom-3 -py-5  absolute whitespace-nowrap text-white  font-medium rounded-xl px-14 ">
+          <button className=" bg-[#0071C2] -bottom-[14px] -right-[132px] -py-5 py-[2px] absolute whitespace-nowrap text-white  font-medium rounded-xl px-14 ">
             <CiSearch className=" absolute top-[2px] left-0 text-white text-xl " />
             Tim kiếm
           </button>
