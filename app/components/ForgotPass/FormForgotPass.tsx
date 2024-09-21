@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import React from "react";
 const ForgotPassword = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
