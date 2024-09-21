@@ -20,11 +20,11 @@ const ForgotPassword = () => {
               id="email"
               name="email"
               placeholder="Email"
-              className="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="mt-1 mb-10 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             <Link
               href={"/ShowChangePass"}
-              className="mt-4 w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300"
+              className="mt-1 px-2 w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300"
             >
               Gửi yêu cầu
             </Link>

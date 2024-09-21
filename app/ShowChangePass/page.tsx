@@ -7,8 +7,8 @@ const page = () => {
   return (
     <div>
       <Header />
-      <Content />
       <FormChangePass />
+      <Content />
       <Footer />
     </div>
   );
