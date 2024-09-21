@@ -18,7 +18,7 @@ const Content = () => {
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
                 alt=""
-                className="h-40 w-60"
+                className="h-40 w-60 rounded-xl"
               />
             </div>
             <div className="ml-1">
@@ -49,7 +49,7 @@ const Content = () => {
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCYDLB-CiKAPAXAB0Y6nxSC-FNC7zWiC4t6Xbc4qTnzKl8crdloIAl2zFVNPdRjqEg7U&usqp=CAU"
                 alt=""
-                className="h-40 w-60"
+                className="h-40 w-60 rounded-xl"
               />
             </div>
             <div className="ml-1">
@@ -90,7 +90,7 @@ const Content = () => {
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
                 alt=""
-                className="h-40 w-60"
+                className="h-40 w-60 rounded-xl"
               />
             </div>
             <div className="ml-1">
