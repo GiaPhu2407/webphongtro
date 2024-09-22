@@ -24,7 +24,7 @@ const ForgotPassword = () => {
             />
             <Link
               href={"/ShowChangePass"}
-              className="mt-1 px-2 w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300"
+              className="w-[150px] p-4 mt-6 text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg hover:scale-105 transition transform duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 "
             >
               Gửi yêu cầu
             </Link>
