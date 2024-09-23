@@ -5,7 +5,7 @@ import { FaRegUser } from "react-icons/fa6";
 const Content1 = () => {
   return (
     <div className="flex justify-center items-center mt-5">
-      <div className="w-[1212px] h-[1215px] bg-[#FFFAFA]">
+      <div className="w-[1212px] h-auto bg-[#FFFAFA]">
         <div className="ml-10 mt-2">
           <p className="">Ký túc xá tây đông</p>
           <div className="flex">
@@ -76,10 +76,12 @@ const Content1 = () => {
           <div className="space-y-4 mt-10">
             {/* Comment 1 */}
             <div className="flex items-start mt-4">
-              <FaRegUser className="mt-[3px]"  />
+              <FaRegUser className="mt-[3px]" />
               <div>
                 <p className="text-sm font-semibold ml-4">@lehuy1234</p>
-                <p className="ml-4">Phòng trọ oke nha mình mất tới đó xem xong</p>
+                <p className="ml-4">
+                  Phòng trọ oke nha mình mất tới đó xem xong
+                </p>
               </div>
             </div>
 
@@ -88,7 +90,9 @@ const Content1 = () => {
               <FaRegUser className="mt-[3px]" />
               <div>
                 <p className="text-sm font-semibold ml-4">@phu1234</p>
-                <p className="ml-4">Trọ không ngon nha mọi người toàn là ảo thôi</p>
+                <p className="ml-4">
+                  Trọ không ngon nha mọi người toàn là ảo thôi
+                </p>
               </div>
             </div>
 
@@ -97,7 +101,9 @@ const Content1 = () => {
               <FaRegUser className="mt-[3px]" />
               <div>
                 <p className="text-sm font-semibold ml-4">@thinhngut245</p>
-                <p className="ml-4">Phòng trọ ổn nha có điều hơi xa với trường mình</p>
+                <p className="ml-4">
+                  Phòng trọ ổn nha có điều hơi xa với trường mình
+                </p>
               </div>
             </div>
           </div>
