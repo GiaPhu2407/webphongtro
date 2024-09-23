@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaPhoneAlt } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel as UICarousel,
@@ -68,6 +68,10 @@ const CustomCarousel = () => {
             <p className="bg-[#39D336] w-3 h-3 rounded-3xl mt-1"></p>
             <p>Đang hoạt động</p>
           </div>
+          <button className="flex bg-[#39D336] justify-center items-center ml-[60px] w-[200px] mt-2 my-10 h-10 rounded-2xl hover:bg-green-700 ">
+            <FaPhoneAlt />
+            0333934997
+          </button>
         </div>
       </div>
       <div className="border-t h-1 border-[#1266DD]  mt-5"></div>

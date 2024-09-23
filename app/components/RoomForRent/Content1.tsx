@@ -1,5 +1,7 @@
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
+
+import { FaRegUser } from "react-icons/fa6";
 const Content1 = () => {
   return (
     <div className="flex justify-center items-center mt-5">
@@ -22,7 +24,10 @@ const Content1 = () => {
               Thuê Ngay
             </button>
           </div>
-          <div className="border-t h-1 border-[#000000]  mt-5"></div>
+        </div>
+        {/* ở dưới */}
+
+        <div className="ml-10">
           <p className="text-xl mt-2">Thông tin mô tả</p>
           <p className=" mt-2">
             Chính chủ cho thuê phòng trọ 25-30 m2, còn một phòng master của căn
@@ -49,6 +54,53 @@ const Content1 = () => {
             referrerPolicy="no-referrer-when-downgrade"
             className="w-full"
           />
+        </div>
+        <div className="w-full  mx-auto p-4 ">
+          {/* Input Section */}
+          <div className="flex items-center mb-4">
+            <FaRegUser />
+            <input
+              type="text"
+              placeholder="Nhập nội dung..."
+              className="flex-grow p-2 ml-1 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-400"
+            />
+          </div>
+
+          {/* Divider */}
+          <div className="border-t h-1 w-full border-[#000000]  mt-5"></div>
+          <button className="ml-[1000px] mt-2 px-4 py-2 bg-[#00C2FF] text-black font-semibold rounded-lg w-[147px]">
+            Bình Luận
+          </button>
+
+          {/* Comments Section */}
+          <div className="space-y-4 mt-10">
+            {/* Comment 1 */}
+            <div className="flex items-start mt-4">
+              <FaRegUser className="mt-[3px]"  />
+              <div>
+                <p className="text-sm font-semibold ml-4">@lehuy1234</p>
+                <p className="ml-4">Phòng trọ oke nha mình mất tới đó xem xong</p>
+              </div>
+            </div>
+
+            {/* Comment 2 */}
+            <div className="flex items-start mt-4">
+              <FaRegUser className="mt-[3px]" />
+              <div>
+                <p className="text-sm font-semibold ml-4">@phu1234</p>
+                <p className="ml-4">Trọ không ngon nha mọi người toàn là ảo thôi</p>
+              </div>
+            </div>
+
+            {/* Comment 3 */}
+            <div className="flex items-start mt-4">
+              <FaRegUser className="mt-[3px]" />
+              <div>
+                <p className="text-sm font-semibold ml-4">@thinhngut245</p>
+                <p className="ml-4">Phòng trọ ổn nha có điều hơi xa với trường mình</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
