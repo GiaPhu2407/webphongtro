@@ -12,9 +12,9 @@ const Header = () => {
   };
 
   // Function to close dropdown when clicking outside
-  const closeDropdown = () => {
-    setDropdownOpen(false);
-  };
+//   const closeDropdown = () => {
+//     setDropdownOpen(false);
+//   };
 
   return (
     <div>
