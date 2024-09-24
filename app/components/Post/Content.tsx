@@ -3,7 +3,7 @@ import React from "react";
 const Content = () => {
   return (
     <div>
-      <div className="border-t w-full h-1 bg-[#1266DD] mt-20"></div>
+      <div className="border-t w-full h-1 bg-[#1266DD] mt-10"></div>
       <div className="flex justify-center mt-4">
         <img
           src="https://rungduabaymau.vn/wp-content/uploads/2022/11/bien-my-Khe.jpeg"

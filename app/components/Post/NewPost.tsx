@@ -287,6 +287,12 @@ const NewPost = () => {
               </div>
             </div>
           </div>
+          {/* Add this section at the bottom of your form */}
+          <div className="flex justify-center -mt-40">
+            <button className="bg-[#1266DD] text-white py-2 px-4 rounded-lg hover:bg-[#6b8bb8]">
+              Đăng tin mới
+            </button>
+          </div>
         </div>
       </div>
     </div>
