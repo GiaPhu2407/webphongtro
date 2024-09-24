@@ -69,9 +69,10 @@ const Header = () => {
         className="w-full h-10 mt-2 flex justify-center items-center sticky top-0 z-[100]"
       >
         <div className="flex content-center gap-12">
-          <a href="" className="hover:bg-red-600 py-2 px-2">
+          <Link href={"/ShowTrangChu"} className="hover:bg-red-600 py-2 px-2">
             Trang Chủ
-          </a>
+          </Link>
+
           <a href="" className="hover:bg-red-600 py-2 px-2">
             Cho thuê phòng trọ
           </a>
