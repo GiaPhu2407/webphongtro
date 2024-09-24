@@ -132,7 +132,7 @@ const NewPost = () => {
         {/* Address Input Field */}
         <div className="ml-1 text-center mr-80 mt-2">
           <p className="mr-[880px] text-center">Địa chỉ chính xác</p>
-          <input type="text" className="bg-[#8D90AC] w-[1350px] rounded-2xl" />
+          <input type="text" className="bg-[#FFF5F5] w-[1350px] rounded-2xl" />
         </div>
 
         {/* Description Information */}

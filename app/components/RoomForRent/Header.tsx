@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
@@ -41,7 +42,9 @@ const Header = () => {
             {isDropdownOpen && (
               <ul className="menu menu-sm dropdown-content bg-[#D9D9D9] rounded-box absolute z-[101] mt-3 w-52 p-2 shadow py-5">
                 <li>
-                  <a className="justify-between">Thông tin cá nhân</a>
+                  <Link href={"/ShowProfile"} className="justify-between">
+                    Thông tin cá nhân
+                  </Link>
                 </li>
                 <li>
                   <a>Đổi mật khẩu</a>
