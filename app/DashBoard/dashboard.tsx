@@ -18,7 +18,7 @@ import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaChartLine } from "react-icons/fa";
 import { FileSymlink } from "lucide-react";
-//import PieChartDemo from "@/components/pieChart";
+import PieChartDemo from "@/components/pieChart";
 //import LineChartDemo from "@/components/LineChart";
 import ChartDemoPage from "@/components/Barchar";
 //import PolarChartDemo from "@/components/Polararea";
@@ -173,6 +173,9 @@ const Dashboard = () => {
       </div>
       <div className=" w-[1000px] overflow-auto shadow-blue-800 mt-5">
         <ChartDemoPage />
+      </div>
+      <div className=" w-[1000px] overflow-auto shadow-blue-800 mt-5">
+        <PieChartDemo />
       </div>
     </div>
   );

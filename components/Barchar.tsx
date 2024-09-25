@@ -163,7 +163,7 @@ const exportToExcel = async () => {
 
 const ChartDemoPage = () => {
   return (
-    <div className="pl-5 rounded-lg">
+    <div className="pl-5 rounded-lg bg-cyan-500 shadow-lg shadow-cyan-500/50">
       <div>
         <p className="font-semibold">Tổng số người truy cập trong tháng</p>
       </div>
