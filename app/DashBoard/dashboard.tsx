@@ -153,10 +153,25 @@ const Dashboard = () => {
       <p className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 ">
         Welcome Back
       </p>
-      <div className="bg-[#a77878] w-full h-56">
-        <p>tổng số người truy cập</p>
+      <div className="bg-[#F9F7F7] mt-10 w-full h-24 relative">
+        <div className="flex justify-between">
+          <div className="ml-2">
+            {" "}
+            <p className="font-semibold">Tổng số người truy cập</p>
+            <p className="mt-5 font-medium">+16M People</p>
+          </div>
+          <div>
+            {" "}
+            <img
+              src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-1/428603879_3699291333727981_8450238390845543097_n.jpg?stp=dst-jpg_s200x200&_nc_cat=107&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF8eAl4DqSiHc45WD_3ZUa0Yj2_k1pIrCxiPb-TWkisLKdt4xrCZnSawKeji-j5xGqR90NFt9JrVnVNHzicN-9h&_nc_ohc=dSIfHv9KrmkQ7kNvgEkuD7O&_nc_ht=scontent.fdad2-1.fna&_nc_gid=AqFcB6TXBD7bdG7ouD6rZvQ&oh=00_AYAxuIAP-XZ3c_KHOQ2KDN-LlDLu6doA2KX9Tt3BdhXu0A&oe=66FA05C7"
+              alt=""
+              className="absolute -top-3 w-10 h-10 rounded-full"
+            />
+            <p className="mt-10 mr-2">+100 People</p>
+          </div>
+        </div>
       </div>
-      <div className=" w-[1000px] h-[400px] overflow-auto shadow-blue-800">
+      <div className=" w-[1000px] overflow-auto shadow-blue-800 mt-5">
         <ChartDemoPage />
       </div>
     </div>

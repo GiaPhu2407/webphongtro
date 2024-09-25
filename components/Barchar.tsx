@@ -168,7 +168,7 @@ const ChartDemoPage = () => {
         <p className="font-semibold">Tổng số người truy cập trong tháng</p>
       </div>
       <div className="flex items-start space-x-4">
-        <div className="w-full h-auto max-h-[300px] overflow-auto">
+        <div className="w-full h-[500px] auto max-h-[300px] overflow-auto">
           <div className="h-full">
             <Bar data={data} options={{ maintainAspectRatio: false }} />
           </div>
