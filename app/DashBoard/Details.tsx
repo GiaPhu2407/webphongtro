@@ -18,19 +18,6 @@ import { IoArrowBackCircle } from "react-icons/io5";
 import Header from "./Header";
 
 export function Details() {
-  const roomPosts = [
-    {
-      id: 1,
-      img: "image1-url",
-      title: "GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG...",
-      price: "4.5 triệu/tháng",
-      size: "30m2",
-      location: "Quận Cẩm Lệ, Đà Nẵng",
-      ownerImg: "owner1-url",
-      ownerName: "Nhà trọ ngõ sen",
-    },
-    // other posts
-  ];
   const links = [
     {
       label: "Dashboard",
