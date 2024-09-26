@@ -4,9 +4,12 @@ import dynamic from "next/dynamic";
 import "chart.js/auto";
 import ExcelJS from "exceljs"; // Đảm bảo đã cài đặt exceljs
 import { saveAs } from "file-saver"; // Đảm bảo đã cài đặt file-saver
-const Pie = dynamic(() => import("react-chartjs-2").then((mod) => mod.Pie), {
-  ssr: false,
-});
+const Dou = dynamic(
+  () => import("react-chartjs-2").then((mod) => mod.Doughnut),
+  {
+    ssr: false,
+  }
+);
 
 const data = {
   labels: ["Đã truy cập", "Chưa truy cập"],
@@ -67,7 +70,7 @@ const PieChartDemo = () => {
               Tổng số người đã truy cập trong ngày
             </p>
           </div>
-          <Pie data={data} options={options} />
+          <Dou data={data} options={options} />
         </div>
         <div className="w-full flex flex-col items-center justify-center">
           <div className="flex justify-between w-40 mb-4">

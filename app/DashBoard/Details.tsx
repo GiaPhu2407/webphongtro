@@ -17,8 +17,8 @@ import { TbBrandBooking } from "react-icons/tb";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaChartLine } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { FileSymlink } from "lucide-react";
-
 import PieChartDemo from "@/components/pieChart";
 //import LineChartDemo from "@/components/LineChart";
 import ChartDemoPage from "@/components/Barchar";
@@ -26,8 +26,23 @@ import ChartDemoPage from "@/components/Barchar";
 //import MixedChartDemo from "@/components/mixedchart";
 //import RadarChartDemo from "@/components/radarchart";
 import { GoPeople } from "react-icons/go";
+
 import Header from "./Header";
-export function DashBoard() {
+
+export function Details() {
+  const roomPosts = [
+    {
+      id: 1,
+      img: "image1-url",
+      title: "GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG...",
+      price: "4.5 triệu/tháng",
+      size: "30m2",
+      location: "Quận Cẩm Lệ, Đà Nẵng",
+      ownerImg: "owner1-url",
+      ownerName: "Nhà trọ ngõ sen",
+    },
+    // other posts
+  ];
   const links = [
     {
       label: "Dashboard",
@@ -86,17 +101,13 @@ export function DashBoard() {
         {" "}
         <Header />{" "}
       </div>
-
       <div
         className={cn(
-          "rounded-md mt-1 flex flex-col md:flex-row bg-white dark:bg-neutral-800 w-full flex-1 max-w-full mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
+          "rounded-md flex flex-col md:flex-row bg-white dark:bg-neutral-800 w-full flex-1 max-w-full mx-auto border  border-neutral-200 dark:border-neutral-700 overflow-hidden ",
           "min-h-screen" // for your use case, use `h-screen` instead of `h-[60vh]`
         )}
       >
-        {/* Updated Sidebar with margin */}
-        <div className="">
-          {" "}
-          {/* Add margin here to create space */}
+        <div className="rounded-lg overflow-hidden">
           <Sidebar open={open} setOpen={setOpen} animate={false}>
             <SidebarBody className="justify-between gap-10">
               <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
@@ -106,7 +117,7 @@ export function DashBoard() {
                     <SidebarLink
                       key={idx}
                       link={link}
-                      className="flex items-center rounded-3xl space-x-2 p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-200 dark:hover:bg-neutral-700 transition-colors duration-200"
+                      className="flex items-center space-x-2 p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-200 dark:hover:bg-neutral-700 rounded-md transition-colors duration-200"
                     />
                   ))}
                 </div>
@@ -136,6 +147,7 @@ export function DashBoard() {
     </div>
   );
 }
+
 export const Logo = () => {
   return (
     <Link
@@ -167,33 +179,29 @@ export const LogoIcon = () => {
 // Dummy dashboard component with content
 const Dashboard = () => {
   return (
-    <div className="">
-      <p className="bg-clip- ml-6  ">Welcome Back</p>
-      <div className="bg-[#F9F7F7] mt-10 ml-5 w-full h-24 relative">
-        <div className="flex justify-between">
-          <div className="ml-10">
-            {" "}
-            <p className="font-semibold">Tổng số người truy cập</p>
-            <p className="mt-5 font-medium">+16M People</p>
-          </div>
-          <div>
-            {" "}
-            <img
-              src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-1/428603879_3699291333727981_8450238390845543097_n.jpg?stp=dst-jpg_s200x200&_nc_cat=107&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF8eAl4DqSiHc45WD_3ZUa0Yj2_k1pIrCxiPb-TWkisLKdt4xrCZnSawKeji-j5xGqR90NFt9JrVnVNHzicN-9h&_nc_ohc=dSIfHv9KrmkQ7kNvgEkuD7O&_nc_ht=scontent.fdad2-1.fna&_nc_gid=AqFcB6TXBD7bdG7ouD6rZvQ&oh=00_AYAxuIAP-XZ3c_KHOQ2KDN-LlDLu6doA2KX9Tt3BdhXu0A&oe=66FA05C7"
-              alt=""
-              className="absolute -top-3 w-10 h-10 rounded-full"
-            />
-            <p className="mt-10 mr-2">+100 People</p>
-          </div>
+    <div className="ml-10">
+      <div className=" inline-block mb-5 mt-1">
+        {/* Button content */}
+        <a
+          href="#"
+          className="bg-gradient-to-r from-blue-400 to-pink-500 text-white font-bold py-2 px-4 rounded-l-full relative z-10"
+        >
+          Quản Lý Bài Đăng
+        </a>
+        {/* Arrow part */}
+        <div className="h-full w-6 bg-gradient-to-r from-blue-400 to-pink-500 skew-x-[-30deg]"></div>
+      </div>
+      <div className="border-2 w-[1026px] h-[1256px]">
+        <p className="ml-10 mt-6 font-semibold">Chi tiết bài đăng</p>
+        <div>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP8Zb0j-VI4vNjGBp4knIPg6W1KyFkKVKtp_Ga7DJnw5DBSwBQv2lRlVw3OG7Fg3VocVI&usqp=CAU"
+            alt=""
+            className="ml-10"
+          />
         </div>
-      </div>
-      <div className=" w-[1000px] overflow-hidden shadow-blue-800 mt-5">
-        <ChartDemoPage />
-      </div>
-      <div className=" w-[1000px]  shadow-blue-800 mt-5 ">
-        <PieChartDemo />
       </div>
     </div>
   );
 };
-export default DashBoard;
+export default Details;

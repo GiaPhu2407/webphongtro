@@ -27,6 +27,7 @@ import ChartDemoPage from "@/components/Barchar";
 //import RadarChartDemo from "@/components/radarchart";
 import { GoPeople } from "react-icons/go";
 import DashBoard from "./dashboard";
+import Header from "./Header";
 export function ManagerPost() {
   const roomPosts = [
     {
@@ -94,51 +95,58 @@ export function ManagerPost() {
   ];
   const [open, setOpen] = useState(false);
   return (
-    <div
-      className={cn(
-        "rounded-md flex flex-col md:flex-row bg-white dark:bg-neutral-800 w-full flex-1 max-w-full mx-auto border  border-neutral-200 dark:border-neutral-700 overflow-hidden ",
-        "min-h-screen" // for your use case, use `h-screen` instead of `h-[60vh]`
-      )}
-    >
-      <div className="rounded-lg overflow-hidden">
-        <Sidebar open={open} setOpen={setOpen} animate={false}>
-          <SidebarBody className="justify-between gap-10">
-            <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
-              {open ? <Logo /> : <LogoIcon />}
-              <div className="mt-8 flex flex-col gap-2">
-                {links.map((link, idx) => (
-                  <SidebarLink
-                    key={idx}
-                    link={link}
-                    className="flex items-center space-x-2 p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-200 dark:hover:bg-neutral-700 rounded-md transition-colors duration-200"
-                  />
-                ))}
-              </div>
-            </div>
-            <div>
-              <SidebarLink
-                link={{
-                  label: "Gia Phu",
-                  href: "#",
-                  icon: (
-                    <img
-                      src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/428603879_3699291333727981_8450238390845543097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF8eAl4DqSiHc45WD_3ZUa0Yj2_k1pIrCxiPb-TWkisLKdt4xrCZnSawKeji-j5xGqR90NFt9JrVnVNHzicN-9h&_nc_ohc=bOEh471GIxUQ7kNvgHsX5jW&_nc_ht=scontent.fdad2-1.fna&oh=00_AYDcWgJsXxzR4n9Z_AzzVIwJKxH7nhOj5EkpjS99C-PUzg&oe=66DB9B05"
-                      className="h-7 w-7 flex-shrink-0 rounded-full"
-                      width={50}
-                      height={50}
-                      alt="Avatar"
-                    />
-                  ),
-                }}
-              />
-            </div>
-          </SidebarBody>
-        </Sidebar>
+    <div>
+      <div className="-mt-2">
+        {" "}
+        <Header />{" "}
       </div>
-      <Dashboard />
+      <div
+        className={cn(
+          "rounded-md flex flex-col md:flex-row bg-white dark:bg-neutral-800 w-full flex-1 max-w-full mx-auto border  border-neutral-200 dark:border-neutral-700 overflow-hidden ",
+          "min-h-screen" // for your use case, use `h-screen` instead of `h-[60vh]`
+        )}
+      >
+        <div className="rounded-lg overflow-hidden">
+          <Sidebar open={open} setOpen={setOpen} animate={false}>
+            <SidebarBody className="justify-between gap-10">
+              <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+                {open ? <Logo /> : <LogoIcon />}
+                <div className="mt-8 flex flex-col gap-2">
+                  {links.map((link, idx) => (
+                    <SidebarLink
+                      key={idx}
+                      link={link}
+                      className="flex items-center space-x-2 p-2 text-neutral-700 hover:bg-neutral-200 dark:text-neutral-200 dark:hover:bg-neutral-700 rounded-md transition-colors duration-200"
+                    />
+                  ))}
+                </div>
+              </div>
+              <div>
+                <SidebarLink
+                  link={{
+                    label: "Gia Phu",
+                    href: "#",
+                    icon: (
+                      <img
+                        src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/428603879_3699291333727981_8450238390845543097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF8eAl4DqSiHc45WD_3ZUa0Yj2_k1pIrCxiPb-TWkisLKdt4xrCZnSawKeji-j5xGqR90NFt9JrVnVNHzicN-9h&_nc_ohc=bOEh471GIxUQ7kNvgHsX5jW&_nc_ht=scontent.fdad2-1.fna&oh=00_AYDcWgJsXxzR4n9Z_AzzVIwJKxH7nhOj5EkpjS99C-PUzg&oe=66DB9B05"
+                        className="h-7 w-7 flex-shrink-0 rounded-full"
+                        width={50}
+                        height={50}
+                        alt="Avatar"
+                      />
+                    ),
+                  }}
+                />
+              </div>
+            </SidebarBody>
+          </Sidebar>
+        </div>
+        <Dashboard />
+      </div>
     </div>
   );
 }
+
 export const Logo = () => {
   return (
     <Link
@@ -171,9 +179,21 @@ export const LogoIcon = () => {
 const Dashboard = () => {
   return (
     <div className="ml-10">
-      <p>Quản lý bài đăng</p>
+      <div className=" inline-block mb-5 mt-1">
+        {/* Button content */}
+        <a
+          href="#"
+          className="bg-gradient-to-r from-blue-400 to-pink-500 text-white font-bold py-2 px-4 rounded-l-full relative z-10"
+        >
+          Quản Lý Bài Đăng
+        </a>
+        {/* Arrow part */}
+        <div className="h-full w-6 bg-gradient-to-r from-blue-400 to-pink-500 skew-x-[-30deg]"></div>
+      </div>
       <div className="border-2 w-[1026px] h-[1256px]">
-        <p className="ml-10 mt-6">Danh sách duyệt các phòng trọ</p>
+        <p className="ml-10 mt-6 font-semibold">
+          Danh sách duyệt các phòng trọ
+        </p>
         {/* ID:1 */}
         <p className="mt-10 ml-10">ID:1</p>
         <div className=" flex justify-around">
