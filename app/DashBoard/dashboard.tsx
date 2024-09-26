@@ -31,14 +31,14 @@ export function DashBoard() {
   const links = [
     {
       label: "Dashboard",
-      href: "#",
+      href: "/ShowAdmin/Dashboard",
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Quản lý bài đăng",
-      href: "/ShowPersonelManager",
+      href: "/ShowAdmin/ShowManagerPost",
       icon: (
         <GrUserManager className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),

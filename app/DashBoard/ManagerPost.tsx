@@ -45,14 +45,14 @@ export function ManagerPost() {
   const links = [
     {
       label: "Dashboard",
-      href: "#",
+      href: "/ShowAdmin/Dashboard",
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Quản lý bài đăng",
-      href: "/ShowPersonelManager",
+      href: "/ShowAdmin/ShowManagerPost",
       icon: (
         <GrUserManager className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -227,9 +227,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <button className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24">
+          <Link
+            href={"/ShowAdmin/ShowDetails"}
+            className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2"
+          >
             Xem chi tiết
-          </button>
+          </Link>
         </div>
         {/* ID:2 */}
         <p className="mt-10 ml-10">ID:2</p>
@@ -264,9 +267,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <button className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24">
+          <Link
+            href={"/ShowAdmin/ShowDetails"}
+            className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2"
+          >
             Xem chi tiết
-          </button>
+          </Link>
         </div>
         {/* ID:3 */}
         <p className="mt-10 ml-10">ID:3</p>
@@ -301,9 +307,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <button className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24">
+          <Link
+            href={"/ShowAdmin/ShowDetails"}
+            className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2"
+          >
             Xem chi tiết
-          </button>
+          </Link>
         </div>
         {/* ID:4 */}
         <p className="mt-10 ml-10">ID:4</p>
@@ -338,9 +347,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <button className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24">
+          <Link
+            href={"/ShowAdmin/ShowDetails"}
+            className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2"
+          >
             Xem chi tiết
-          </button>
+          </Link>
         </div>
         {/* ID:5 */}
         <p className="mt-10 ml-10">ID:5</p>
@@ -375,9 +387,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <button className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24">
+          <Link
+            href={"/ShowAdmin/ShowDetails"}
+            className="bg-[#FD4A4A] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2"
+          >
             Xem chi tiết
-          </button>
+          </Link>
         </div>
         {/* ID:6 */}
       </div>

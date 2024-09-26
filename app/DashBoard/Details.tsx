@@ -46,14 +46,14 @@ export function Details() {
   const links = [
     {
       label: "Dashboard",
-      href: "#",
+      href: "/ShowAdmin/Dashboard",
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Quản lý bài đăng",
-      href: "/ShowPersonelManager",
+      href: "/ShowAdmin/ShowManagerPost",
       icon: (
         <GrUserManager className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -199,7 +199,47 @@ const Dashboard = () => {
             alt=""
             className="ml-10"
           />
+          <p className="ml-10 text-2xl text-[#FA0404] mt-3">
+            Ký túc xá tây đông
+          </p>
+
+          <div className="flex justify-around mt-2">
+            <p>
+              Địa chỉ: Đường Nguyễn Xuân Hữu, Phường Hòa Thọ Đông, Quận Cẩm Lệ,
+              Đà Nẵng
+            </p>
+            <p> Người đăng: Nhà trọ ngỏ sen</p>
+          </div>
+          <div className="flex gap-10 mt-2 ml-5">
+            <p className="text-[#39D336] text-2xl mt-4">1,6 triệu/tháng</p>
+            <p className="mt-5"> Trạng Thái:Còn Chỗ</p>
+            <button className="bg-[#39D336] px-7 py-3 rounded-3xl ml-20">
+              Duyệt Bài
+            </button>
+            <button className="bg-[#F73859]  px-7 py-3 rounded-3xl">
+              Xoá bài
+            </button>
+          </div>
         </div>
+        <div className="border-[1px] border-black mt-5"></div>
+        <p className="ml-10">
+          Thông tin mô tả <br />
+          free 100% tiền phòng tháng đầu <br />
+          Vị trí: Gần công viên Hoàng Văn Thái <br />- Gần trường Đại học Đông Á{" "}
+          <br />- Thuận đường đi qua các Quận Cẩm lệ, <br />
+          --- <br />
+          Mỗi bạn một không gian riêng, tủ đồ riêng. <br />
+          Bếp sử dụng chung. <br />
+          Có máy lạnh, máy giặt. <br />
+          Wifi dùng tẹt ga. <br />
+          Ra vào bằng cửa khóa vân tay. <br />
+          Tòa nhà có thang máy, hầm giữ xe. <br />
+          Bảo vệ và quản lý 24/7. <br />
+          --- <br />
+          Giá siêu ưu đãi: Chỉ 1.600.000đ/tháng. <br />
+          Bao full chi phí điện nước và internet. <br />
+          Địa chỉ: 71 Nguyễn Xuân Hửu P. HTD, Cẩm Lệ.
+        </p>
       </div>
     </div>
   );
