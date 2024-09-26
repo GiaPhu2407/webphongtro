@@ -30,20 +30,7 @@ import { IoArrowBackCircle } from "react-icons/io5";
 
 import Header from "./Header";
 
-export function Details() {
-  const roomPosts = [
-    {
-      id: 1,
-      img: "image1-url",
-      title: "GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG...",
-      price: "4.5 triệu/tháng",
-      size: "30m2",
-      location: "Quận Cẩm Lệ, Đà Nẵng",
-      ownerImg: "owner1-url",
-      ownerName: "Nhà trọ ngõ sen",
-    },
-    // other posts
-  ];
+export function ManagerComment() {
   const links = [
     {
       label: "Dashboard",
@@ -181,7 +168,7 @@ export const LogoIcon = () => {
 const Dashboard = () => {
   return (
     <div className="ml-10">
-      <div className=" inline-block mb-5 mt-1">
+      <div className=" inline-block mb-5 mt-4">
         {/* Button content */}
         <a
           href="#"
@@ -189,67 +176,12 @@ const Dashboard = () => {
         >
           Quản Lý Bài Đăng
         </a>
-        {/* Arrow part */}
-        <div className="h-full w-6 bg-gradient-to-r from-blue-400 to-pink-500 skew-x-[-30deg]"></div>
-      </div>
-      <div className="border-2 w-[1026px] h-[1256px]">
-        <div className="flex mb-2">
-          <Link href="/ShowAdmin/ShowManagerPost">
-            <IoArrowBackCircle className="text-2xl mt-6 ml-6 text-purple-500 transition-transform transform hover:scale-110" />
-          </Link>
-
-          <p className=" mt-6 font-semibold ">Chi tiết bài đăng</p>
+        <div className="bg-[#D9D9D9] w-[1052px] h-[2042px] mt-4">
+          <p className="ml-5 mb-10">Danh sách bình luận</p>
+          <div className="bg-[#FFFFFF] w-[975px] h-[929px] ml-10"></div>
         </div>
-
-        <div>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP8Zb0j-VI4vNjGBp4knIPg6W1KyFkKVKtp_Ga7DJnw5DBSwBQv2lRlVw3OG7Fg3VocVI&usqp=CAU"
-            alt=""
-            className="ml-10"
-          />
-          <p className="ml-10 text-2xl text-[#FA0404] mt-3">
-            Ký túc xá tây đông
-          </p>
-
-          <div className="flex justify-around mt-2">
-            <p>
-              Địa chỉ: Đường Nguyễn Xuân Hữu, Phường Hòa Thọ Đông, Quận Cẩm Lệ,
-              Đà Nẵng
-            </p>
-            <p> Người đăng: Nhà trọ ngỏ sen</p>
-          </div>
-          <div className="flex gap-10 mt-2 ml-5">
-            <p className="text-[#39D336] text-2xl mt-4">1,6 triệu/tháng</p>
-            <p className="mt-5"> Trạng Thái:Còn Chỗ</p>
-            <button className="bg-[#39D336] px-7 py-3 rounded-3xl ml-20">
-              Duyệt Bài
-            </button>
-            <button className="bg-[#F73859]  px-7 py-3 rounded-3xl">
-              Xoá bài
-            </button>
-          </div>
-        </div>
-        <div className="border-[1px] border-black mt-5"></div>
-        <p className="ml-10">
-          Thông tin mô tả <br />
-          free 100% tiền phòng tháng đầu <br />
-          Vị trí: Gần công viên Hoàng Văn Thái <br />- Gần trường Đại học Đông Á{" "}
-          <br />- Thuận đường đi qua các Quận Cẩm lệ, <br />
-          --- <br />
-          Mỗi bạn một không gian riêng, tủ đồ riêng. <br />
-          Bếp sử dụng chung. <br />
-          Có máy lạnh, máy giặt. <br />
-          Wifi dùng tẹt ga. <br />
-          Ra vào bằng cửa khóa vân tay. <br />
-          Tòa nhà có thang máy, hầm giữ xe. <br />
-          Bảo vệ và quản lý 24/7. <br />
-          --- <br />
-          Giá siêu ưu đãi: Chỉ 1.600.000đ/tháng. <br />
-          Bao full chi phí điện nước và internet. <br />
-          Địa chỉ: 71 Nguyễn Xuân Hửu P. HTD, Cẩm Lệ.
-        </p>
       </div>
     </div>
   );
 };
-export default Details;
+export default ManagerComment;
