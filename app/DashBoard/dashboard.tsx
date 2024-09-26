@@ -171,10 +171,10 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className=" w-[1000px] overflow-auto shadow-blue-800 mt-5">
+      <div className=" w-[1000px] overflow-hidden shadow-blue-800 mt-5">
         <ChartDemoPage />
       </div>
-      <div className=" w-[1000px] overflow-auto shadow-blue-800 mt-5">
+      <div className=" w-[1000px]  shadow-blue-800 mt-5 ">
         <PieChartDemo />
       </div>
     </div>

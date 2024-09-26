@@ -163,7 +163,7 @@ const exportToExcel = async () => {
 
 const ChartDemoPage = () => {
   return (
-    <div className="pl-5 rounded-lg bg-cyan-500 shadow-lg shadow-cyan-500/50">
+    <div className="pl-5 bg-white stroke-slate-500 rounded-lg">
       <div>
         <p className="font-semibold">Tổng số người truy cập trong tháng</p>
       </div>
@@ -177,7 +177,7 @@ const ChartDemoPage = () => {
           onClick={exportToExcel}
           className="p-2 bg-[#24A521] rounded-2xl text-white whitespace-nowrap"
         >
-          Export to Excel
+          Xuất Excel
         </button>
       </div>
     </div>
