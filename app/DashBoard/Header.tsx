@@ -18,7 +18,7 @@ const Header = () => {
           <p className="ml-4">Gia Phú</p>
         </div>
         <div className="flex ml-64 mt-2">
-          <IoIosLogOut className="mt-[2px]"/>
+          <IoIosLogOut className="mt-[2px]" />
           <p className="ml-4">Logout</p>
         </div>
       </div>

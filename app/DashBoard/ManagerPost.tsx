@@ -1,15 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
-import {
-  IconArrowLeft,
-  IconBrandTabler,
-  IconSettings,
-  IconUserBolt,
-} from "@tabler/icons-react";
+import { IconBrandTabler } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 import { cn } from "@/lib/utils";
 import { GrUserManager } from "react-icons/gr";
 import { MdCleaningServices } from "react-icons/md";
@@ -18,30 +13,9 @@ import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaChartLine } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
-import { FileSymlink } from "lucide-react";
-import PieChartDemo from "@/components/pieChart";
-//import LineChartDemo from "@/components/LineChart";
-import ChartDemoPage from "@/components/Barchar";
-//import PolarChartDemo from "@/components/Polararea";
-//import MixedChartDemo from "@/components/mixedchart";
-//import RadarChartDemo from "@/components/radarchart";
-import { GoPeople } from "react-icons/go";
-import DashBoard from "./dashboard";
+
 import Header from "./Header";
 export function ManagerPost() {
-  const roomPosts = [
-    {
-      id: 1,
-      img: "image1-url",
-      title: "GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG...",
-      price: "4.5 triệu/tháng",
-      size: "30m2",
-      location: "Quận Cẩm Lệ, Đà Nẵng",
-      ownerImg: "owner1-url",
-      ownerName: "Nhà trọ ngõ sen",
-    },
-    // other posts
-  ];
   const links = [
     {
       label: "Dashboard",
