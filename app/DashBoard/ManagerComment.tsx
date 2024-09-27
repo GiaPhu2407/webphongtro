@@ -154,12 +154,10 @@ const Dashboard = () => {
   // Danh sách các bình luận
   const [comments, setComments] = useState([
     {
-      id: 1,
       username: "@lehuy1234",
       content: "Phòng trọ này oke nha mình mới tới xem xong mng",
     },
     {
-      id: 2,
       username: "@giaphu",
       content: "Dịch vụ tốt, chủ nhà thân thiện.",
     },
@@ -217,7 +215,7 @@ const Dashboard = () => {
                   <p>Duyệt</p>
                   <MdDelete
                     className="text-red-600 text-xl cursor-pointer"
-                    onClick={() => handleDelete(comment.id)} // Gọi hàm xóa với ID của bình luận
+                    onClick={() => handleDelete(comment.username)} // Gọi hàm xóa với ID của bình luận
                   />
                   <p>Xoá</p>
                 </div>
