@@ -11,7 +11,6 @@ import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaChartLine } from "react-icons/fa";
 import Header from "./Header";
-import { MdDelete } from "react-icons/md";
 import { cn } from "@/lib/utils";
 
 export function ManagerHireRoom() {
@@ -241,7 +240,7 @@ export const Dashboard = () => {
                         className="bg-red-500 text-white px-2 py-1 rounded ml-2"
                         onClick={() => handleDelete(comment.id)}
                       >
-                       Xoá
+                        Xoá
                       </button>
                     </td>
                   </tr>
