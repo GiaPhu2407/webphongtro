@@ -171,7 +171,7 @@ const Dashboard = () => {
   const handleDelete = (commentId: string | number) => {
     // Xóa bình luận có id tương ứng
     setComments((prevComments) =>
-      prevComments.filter((comment) => comment.id !== commentId)
+      prevComments.filter((comment) => comment.username !== commentId)
     );
 
     // Hiện thông báo đã xóa
