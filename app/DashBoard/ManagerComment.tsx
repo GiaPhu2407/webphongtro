@@ -165,7 +165,7 @@ const Dashboard = () => {
     },
     // Thêm nhiều bình luận nếu cần
   ]);
-  let variable: any;
+
   // State để quản lý việc hiển thị thông báo
   const [deleteMessage, setDeleteMessage] = useState("");
 
@@ -196,13 +196,13 @@ const Dashboard = () => {
         <div className="bg-[#D9D9D9] w-[1052px] h-[2042px] mt-4">
           <p className="ml-5 mb-10">Danh sách bình luận</p>
           <div className="bg-[#FFFFFF] w-[975px] h-[929px] ml-10">
-            <div className="ml-3 mt-1">
+            <div key={comment.id} className="ml-3 mt-1">
               <p className="mb-4 text-[#F73859]">ID Bài đăng : 1</p>
               <p className="text-[#24A521]">ID Chủ trọ : 1</p>
             </div>
             {/* Danh sách bình luận */}
             {comments.map((comment) => (
-              <div className="flex mt-1 items-center ml-1">
+              <div className="flex mt-1 items-center">
                 <div>
                   <FaUser />
                 </div>
@@ -210,7 +210,7 @@ const Dashboard = () => {
                   <p>{comment.username}</p>
                   <p>{comment.content}</p>
                 </div>
-                <div className="flex ml-auto gap-8 mt-1 items-center">
+                <div className="flex ml-auto gap-10 mt-1 items-center">
                   <FaCircleCheck className="text-green-500 text-xl" />
                   <p>Duyệt</p>
                   <MdDelete
