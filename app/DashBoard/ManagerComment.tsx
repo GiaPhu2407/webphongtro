@@ -149,15 +149,16 @@ export const LogoIcon = () => {
   );
 };
 
-// Dummy dashboard component with content
 const Dashboard = () => {
   // Danh sách các bình luận
   const [comments, setComments] = useState([
     {
+      id: 1, // Thêm ID cho từng bình luận
       username: "@lehuy1234",
       content: "Phòng trọ này oke nha mình mới tới xem xong mng",
     },
     {
+      id: 2, // Thêm ID cho từng bình luận
       username: "@giaphu",
       content: "Dịch vụ tốt, chủ nhà thân thiện.",
     },
@@ -171,7 +172,7 @@ const Dashboard = () => {
   const handleDelete = (commentId: string | number) => {
     // Xóa bình luận có id tương ứng
     setComments((prevComments) =>
-      prevComments.filter((comment) => comment.username !== commentId)
+      prevComments.filter((comment) => comment.id !== commentId)
     );
 
     // Hiện thông báo đã xóa
@@ -202,20 +203,24 @@ const Dashboard = () => {
             </div>
             {/* Danh sách bình luận */}
             {comments.map((comment) => (
-              <div className="flex mt-1 items-center">
+              <div key={comment.id} className="flex mt-1 items-center">
+                {" "}
+                {/* Thêm thuộc tính key tại đây */}
                 <div>
                   <FaUser />
                 </div>
                 <div className="ml-2">
-                  <p>key={comment.username}</p>
-                  <p>key={comment.content}</p>
+                  <p>{comment.username}</p>{" "}
+                  {/* Sửa lại cách hiển thị username */}
+                  <p>{comment.content}</p>{" "}
+                  {/* Sửa lại cách hiển thị nội dung */}
                 </div>
                 <div className="flex ml-auto gap-10 mt-1 items-center">
                   <FaCircleCheck className="text-green-500 text-xl" />
                   <p>Duyệt</p>
                   <MdDelete
                     className="text-red-600 text-xl cursor-pointer"
-                    onClick={() => handleDelete(comment.username)} // Gọi hàm xóa với ID của bình luận
+                    onClick={() => handleDelete(comment.id)} // Gọi hàm xóa với ID của bình luận
                   />
                   <p>Xoá</p>
                 </div>
