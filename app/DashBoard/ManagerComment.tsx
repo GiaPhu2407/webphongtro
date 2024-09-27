@@ -4,7 +4,7 @@ import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import { IconBrandTabler } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
+import { FaCircleCheck } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { GrUserManager } from "react-icons/gr";
 import { MdCleaningServices } from "react-icons/md";
@@ -12,9 +12,9 @@ import { TbBrandBooking } from "react-icons/tb";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaChartLine } from "react-icons/fa";
-
+import { FaUser } from "react-icons/fa";
 import Header from "./Header";
-
+import { MdDelete } from "react-icons/md";
 export function ManagerComment() {
   const links = [
     {
@@ -151,9 +151,41 @@ export const LogoIcon = () => {
 
 // Dummy dashboard component with content
 const Dashboard = () => {
+  // Danh sách các bình luận
+  const [comments, setComments] = useState([
+    {
+      id: 1,
+      username: "@lehuy1234",
+      content: "Phòng trọ này oke nha mình mới tới xem xong mng",
+    },
+    {
+      id: 2,
+      username: "@giaphu",
+      content: "Dịch vụ tốt, chủ nhà thân thiện.",
+    },
+    // Thêm nhiều bình luận nếu cần
+  ]);
+
+  // State để quản lý việc hiển thị thông báo
+  const [deleteMessage, setDeleteMessage] = useState("");
+
+  // Hàm xử lý sự kiện xoá
+  const handleDelete = (commentId: any) => {
+    // Xóa bình luận có id tương ứng
+    setComments(comments.filter((comment) => comment.id !== commentId));
+
+    // Hiện thông báo đã xóa
+    setDeleteMessage("Đã xóa bình luận thành công");
+
+    // Ẩn thông báo sau 3 giây
+    setTimeout(() => {
+      setDeleteMessage("");
+    }, 3000);
+  };
+
   return (
     <div className="ml-10">
-      <div className=" inline-block mb-5 mt-4">
+      <div className="inline-block mb-5 mt-4">
         {/* Button content */}
         <a
           href="#"
@@ -163,10 +195,42 @@ const Dashboard = () => {
         </a>
         <div className="bg-[#D9D9D9] w-[1052px] h-[2042px] mt-4">
           <p className="ml-5 mb-10">Danh sách bình luận</p>
-          <div className="bg-[#FFFFFF] w-[975px] h-[929px] ml-10"></div>
+          <div className="bg-[#FFFFFF] w-[975px] h-[929px] ml-10">
+            <div className="ml-3 mt-1">
+              <p className="mb-4 text-[#F73859]">ID Bài đăng : 1</p>
+              <p className="text-[#24A521]">ID Chủ trọ : 1</p>
+            </div>
+            {/* Danh sách bình luận */}
+            {comments.map((comment) => (
+              <div className="flex mt-1 items-center ml-1">
+                <div>
+                  <FaUser />
+                </div>
+                <div className="ml-2">
+                  <p>{comment.username}</p>
+                  <p>{comment.content}</p>
+                </div>
+                <div className="flex ml-auto gap-8 mt-1 items-center">
+                  <FaCircleCheck className="text-green-500 text-xl" />
+                  <p>Duyệt</p>
+                  <MdDelete
+                    className="text-red-600 text-xl cursor-pointer"
+                    onClick={() => handleDelete(comment.id)} // Gọi hàm xóa với ID của bình luận
+                  />
+                  <p>Xoá</p>
+                </div>
+              </div>
+            ))}
+
+            {/* Thông báo khi xóa */}
+            {deleteMessage && (
+              <p className="text-red-500 mt-2">{deleteMessage}</p>
+            )}
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default ManagerComment;
