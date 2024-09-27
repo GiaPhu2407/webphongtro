@@ -133,7 +133,14 @@ export const LogoIcon = () => {
     </Link>
   );
 };
-
+interface Comment {
+  id: number;
+  username: string;
+  idbaidang: string;
+  TenChuTro: string;
+  NgayThue: string;
+  TrangThai: string;
+}
 export const Dashboard = () => {
   const [comments, setComments] = useState([
     {
