@@ -209,8 +209,8 @@ const Dashboard = () => {
                   <FaUser />
                 </div>
                 <div className="ml-2">
-                  <p>{comment.username}</p>
-                  <p>{comment.content}</p>
+                  <p>key={comment.username}</p>
+                  <p>key={comment.content}</p>
                 </div>
                 <div className="flex ml-auto gap-10 mt-1 items-center">
                   <FaCircleCheck className="text-green-500 text-xl" />
