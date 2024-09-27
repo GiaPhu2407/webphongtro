@@ -149,20 +149,24 @@ export const LogoIcon = () => {
   );
 };
 
-const Dashboard = () => {
+export const Dashboard = () => {
   // Danh sách các bình luận
   const [comments, setComments] = useState([
     {
-      id: 1, // Thêm ID cho từng bình luận
+      id: 1,
       username: "@lehuy1234",
       content: "Phòng trọ này oke nha mình mới tới xem xong mng",
     },
     {
-      id: 2, // Thêm ID cho từng bình luận
+      id: 2,
       username: "@giaphu",
       content: "Dịch vụ tốt, chủ nhà thân thiện.",
     },
-    // Thêm nhiều bình luận nếu cần
+    {
+      id: 3,
+      username: "@vietngu",
+      content: "Dịch vụ quá chuyên nghiệp, perfect mng ạ.",
+    },
   ]);
 
   // State để quản lý việc hiển thị thông báo
@@ -170,15 +174,11 @@ const Dashboard = () => {
 
   // Hàm xử lý sự kiện xoá
   const handleDelete = (commentId: string | number) => {
-    // Xóa bình luận có id tương ứng
     setComments((prevComments) =>
       prevComments.filter((comment) => comment.id !== commentId)
     );
 
-    // Hiện thông báo đã xóa
     setDeleteMessage("Đã xóa bình luận thành công");
-
-    // Ẩn thông báo sau 3 giây
     setTimeout(() => {
       setDeleteMessage("");
     }, 3000);
@@ -194,8 +194,10 @@ const Dashboard = () => {
         >
           Quản Lý Bài Đăng
         </a>
-        <div className="bg-[#D9D9D9] w-[1052px] h-[2042px] mt-4">
-          <p className="ml-5 mb-10">Danh sách bình luận</p>
+
+        {/* bài đăng 1 */}
+        <div className="bg-[#D9D9D9] w-[1052px] h-[1020px] mt-4">
+          <p className="ml-5 mb-10">Danh sách bình luận (Bài đăng 1)</p>
           <div className="bg-[#FFFFFF] w-[975px] h-[929px] ml-10">
             <div className="ml-3 mt-1">
               <p className="mb-4 text-[#F73859]">ID Bài đăng : 1</p>
@@ -204,25 +206,57 @@ const Dashboard = () => {
             {/* Danh sách bình luận */}
             {comments.map((comment) => (
               <div key={comment.id} className="flex mt-1 items-center">
-                {" "}
-                {/* Thêm thuộc tính key tại đây */}
                 <div>
                   <FaUser />
                 </div>
                 <div className="ml-2">
-                  <p>{comment.username}</p>{" "}
-                  {/* Sửa lại cách hiển thị username */}
-                  <p>{comment.content}</p>{" "}
-                  {/* Sửa lại cách hiển thị nội dung */}
+                  <p>{comment.username}</p>
+                  <p>{comment.content}</p>
                 </div>
                 <div className="flex ml-auto gap-10 mt-1 items-center">
                   <FaCircleCheck className="text-green-500 text-xl" />
                   <p>Duyệt</p>
                   <MdDelete
                     className="text-red-600 text-xl cursor-pointer"
-                    onClick={() => handleDelete(comment.id)} // Gọi hàm xóa với ID của bình luận
+                    onClick={() => handleDelete(comment.id)}
                   />
-                  <p>Xoá</p>
+                  <p className="mr-4">Xoá</p>
+                </div>
+              </div>
+            ))}
+
+            {/* Thông báo khi xóa */}
+            {deleteMessage && (
+              <p className="text-red-500 mt-2">{deleteMessage}</p>
+            )}
+          </div>
+        </div>
+
+        {/*bài đăng 2 */}
+        <div className="bg-[#D9D9D9] w-[1052px] h-[1020px] -mt-2 ">
+          <div className="bg-[#FFFFFF] w-[975px] h-[929px] ml-10">
+            <div className="ml-3 mt-1">
+              <p className="mb-4 text-[#F73859]">ID Bài đăng : 2</p>
+              <p className="text-[#24A521]">ID Chủ trọ : 2</p>
+            </div>
+            {/* Danh sách bình luận */}
+            {comments.map((comment) => (
+              <div key={comment.id} className="flex mt-1 items-center">
+                <div>
+                  <FaUser />
+                </div>
+                <div className="ml-2">
+                  <p>{comment.username}</p>
+                  <p>{comment.content}</p>
+                </div>
+                <div className="flex ml-auto gap-10 mt-1 items-center">
+                  <FaCircleCheck className="text-green-500 text-xl" />
+                  <p>Duyệt</p>
+                  <MdDelete
+                    className="text-red-600 text-xl cursor-pointer"
+                    onClick={() => handleDelete(comment.id)}
+                  />
+                  <p className="mr-4">Xoá</p>
                 </div>
               </div>
             ))}
