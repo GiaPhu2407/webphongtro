@@ -167,12 +167,14 @@ const Dashboard = () => {
   ]);
 
   // State để quản lý việc hiển thị thông báo
-  const [deleteMessage, setDeleteMessage] = useState("");
+  const [deleteMessage, setDeleteMessage] = useState<string>("");
 
   // Hàm xử lý sự kiện xoá
-  const handleDelete = (commentId: any) => {
+  const handleDelete = (commentId: string | number) => {
     // Xóa bình luận có id tương ứng
-    setComments(comments.filter((comment) => comment.id !== commentId));
+    setComments((prevComments) =>
+      prevComments.filter((comment) => comment.id !== commentId)
+    );
 
     // Hiện thông báo đã xóa
     setDeleteMessage("Đã xóa bình luận thành công");
@@ -196,7 +198,7 @@ const Dashboard = () => {
         <div className="bg-[#D9D9D9] w-[1052px] h-[2042px] mt-4">
           <p className="ml-5 mb-10">Danh sách bình luận</p>
           <div className="bg-[#FFFFFF] w-[975px] h-[929px] ml-10">
-            <div key={comment.id} className="ml-3 mt-1">
+            <div className="ml-3 mt-1">
               <p className="mb-4 text-[#F73859]">ID Bài đăng : 1</p>
               <p className="text-[#24A521]">ID Chủ trọ : 1</p>
             </div>
