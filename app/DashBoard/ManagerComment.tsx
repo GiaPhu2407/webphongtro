@@ -165,7 +165,7 @@ const Dashboard = () => {
     },
     // Thêm nhiều bình luận nếu cần
   ]);
-
+  let variable: any;
   // State để quản lý việc hiển thị thông báo
   const [deleteMessage, setDeleteMessage] = useState("");
 
