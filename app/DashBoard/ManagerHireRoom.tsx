@@ -136,7 +136,7 @@ export const LogoIcon = () => {
 
 interface Comment {
   id: number;
-  username: string;
+  tenkhachang: string;
   idbaidang: string;
   TenChuTro: string;
   NgayThue: string;
@@ -147,7 +147,7 @@ export const Dashboard = () => {
   const [comments, setComments] = useState<Comment[]>([
     {
       id: 1,
-      username: "@lehuy1234",
+      tenkhachang: "@lehuy1234",
       idbaidang: "1",
       TenChuTro: "Gia Phú",
       NgayThue: "18/11/2024",
@@ -155,7 +155,7 @@ export const Dashboard = () => {
     },
     {
       id: 2,
-      username: "@giaphu",
+      tenkhachang: "@giaphu",
       idbaidang: "2",
       TenChuTro: "Nguyễn Văn A",
       NgayThue: "20/11/2024",
@@ -163,7 +163,7 @@ export const Dashboard = () => {
     },
     {
       id: 3,
-      username: "@vietngu",
+      tenkhachang: "@vietngu",
       idbaidang: "3",
       TenChuTro: "Lê Huy",
       NgayThue: "22/11/2024",
@@ -202,68 +202,114 @@ export const Dashboard = () => {
 
   return (
     <div className="p-4 flex flex-col w-full overflow-y-auto">
-      <h1 className="text-2xl font-semibold mb-4">Quản lý bình luận</h1>
-      {deleteMessage && (
-        <div className="bg-red-500 text-white p-2 rounded mb-4">
-          {deleteMessage}
-        </div>
-      )}
-      <table className="min-w-full border border-gray-200">
-        <thead>
-          <tr>
-            <th className="border-b px-4 py-2">ID</th>
-            <th className="border-b px-4 py-2">Username</th>
-            <th className="border-b px-4 py-2">Tên Chủ Trọ</th>
-            <th className="border-b px-4 py-2">Ngày Thuê</th>
-            <th className="border-b px-4 py-2">Trạng Thái</th>
-            <th className="border-b px-4 py-2">Thao tác</th>
-          </tr>
-        </thead>
-        <tbody>
-          {comments.map((comment) => (
-            <tr key={comment.id}>
-              <td className="border-b px-4 py-2">{comment.id}</td>
-              <td className="border-b px-4 py-2">{comment.username}</td>
-              <td className="border-b px-4 py-2">{comment.TenChuTro}</td>
-              <td className="border-b px-4 py-2">{comment.NgayThue}</td>
-              <td className="border-b px-4 py-2">{comment.TrangThai}</td>
-              <td className="border-b px-4 py-2">
-                <button
-                  onClick={() => handleEdit(comment)}
-                  className="text-blue-500 hover:underline"
-                >
-                  Sửa
-                </button>
-                <button
-                  onClick={() => handleDelete(comment.id)}
-                  className="text-red-500 hover:underline ml-2"
-                >
-                  Xóa
-                </button>
-              </td>
+      <div className="border-2 w-[1052px] h-[2000px] mt-4">
+        <p className="ml-5 mb-10 mt-10 text-xl font-semibold">
+          Danh sách thuê phòng
+        </p>
+        <table className="min-w-full  border-gray-200">
+          <thead>
+            <tr>
+              <th className="border-r px-4 py-2">ID</th>
+              <th className="border-r px-4 py-2">Tên Khách Hàng</th>
+              <th className="border-r px-4 py-2">Tên Chủ Trọ</th>
+              <th className="border-r px-4 py-2">Ngày Thuê</th>
+              <th className="border-r px-4 py-2">Trạng Thái</th>
+              <th className="border-r px-4 py-2">Thao tác</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      {editComment && (
-        <div className="mt-4">
-          <h2 className="text-xl mb-2">Chỉnh sửa bình luận</h2>
-          <input
-            type="text"
-            value={editComment.username}
-            onChange={(e) =>
-              setEditComment({ ...editComment, username: e.target.value })
-            }
-            className="border p-2 rounded mb-2 w-full"
-          />
-          <button
-            onClick={handleSave}
-            className="bg-blue-500 text-white p-2 rounded"
-          >
-            Lưu
-          </button>
-        </div>
-      )}
+          </thead>
+          <tbody>
+            {comments.map((comment) => (
+              <tr key={comment.id}>
+                <td className="border-r px-4 py-2">{comment.id}</td>
+                <td className="border-r px-4 py-2">{comment.tenkhachang}</td>
+                <td className="border-r px-4 py-2">{comment.TenChuTro}</td>
+                <td className="border-r px-4 py-2">{comment.NgayThue}</td>
+                <td className="border-r px-4 py-2">{comment.TrangThai}</td>
+                <td className="border-r px-4 py-2">
+                  <button
+                    onClick={() => handleEdit(comment)}
+                    className="text-blue-500 hover:underline"
+                  >
+                    Sửa
+                  </button>
+                  <button
+                    onClick={() => handleDelete(comment.id)}
+                    className="text-red-500 hover:underline ml-2"
+                  >
+                    Xóa
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {deleteMessage && (
+          <div className="bg-red-500 text-white p-2 rounded mb-4">
+            {deleteMessage}
+          </div>
+        )}
+        {editComment && (
+          <div className="mt-4">
+            <h2 className="text-xl mb-2">Chỉnh sửa thông tin</h2>
+            <label className="mt-4 block">ID:</label>
+            <input
+              type="number" // Đảm bảo loại là number
+              value={editComment.id}
+              onChange={
+                (e) =>
+                  setEditComment({ ...editComment, id: Number(e.target.value) }) // Chuyển đổi giá trị sang số
+              }
+              className="border p-2 rounded mb-2 w-full"
+            />
+
+            <label className="mt-4 block">Username:</label>
+            <input
+              type="text"
+              value={editComment.tenkhachang}
+              onChange={(e) =>
+                setEditComment({ ...editComment, tenkhachang: e.target.value })
+              }
+              className="border p-2 rounded mb-2 w-full"
+            />
+
+            <label className="mt-4 block">Tên chủ trọ:</label>
+            <input
+              className="w-full p-2 border border-gray-300 rounded mt-2"
+              type="text"
+              value={editComment.TenChuTro}
+              onChange={(e) =>
+                setEditComment({ ...editComment, TenChuTro: e.target.value })
+              }
+            />
+
+            <label className="mt-4 block">Ngày thuê:</label>
+            <input
+              className="w-full p-2 border border-gray-300 rounded mt-2"
+              type="text"
+              value={editComment.NgayThue}
+              onChange={(e) =>
+                setEditComment({ ...editComment, NgayThue: e.target.value })
+              }
+            />
+
+            <label className="mt-4 block">Trạng thái:</label>
+            <input
+              className="w-full p-2 border border-gray-300 rounded mt-2"
+              type="text"
+              value={editComment.TrangThai}
+              onChange={(e) =>
+                setEditComment({ ...editComment, TrangThai: e.target.value })
+              }
+            />
+            <button
+              onClick={handleSave}
+              className="bg-blue-500 text-white p-2 rounded"
+            >
+              Lưu
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
