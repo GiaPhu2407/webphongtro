@@ -7,7 +7,7 @@ const ListPost = () => {
       <div className="border-8 border-[#1266DD] w-[1284px] h-[1193px] rounded-2xl ">
         <p className="mt-10 ml-5">Danh sách Bài Yêu Thích</p>
         <p className="border-t-2 border-black w-[1200px] ml-10 mt-2"></p>
-        {/* Bài yêu thích 1 */}
+        {/* Bài đăng 1 */}
         <div className=" flex justify-around mt-5">
           <div className="flex ml-10">
             <div>
@@ -40,7 +40,7 @@ const ListPost = () => {
           </div>
           <Link
             href={""}
-            className="bg-[#0F0E0E] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2 transform transition-transform duration-300 hover:scale-110"
+            className="bg-[#0F0E0E] text-white whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2 transform transition-transform duration-300 hover:scale-110"
           >
             Cập Nhật
           </Link>
@@ -51,12 +51,12 @@ const ListPost = () => {
             Xoá
           </Link>
         </div>
-        {/* Bài yêu thích 1 */}
+        {/* Bài đăng 2 */}
         <div className=" flex justify-around mt-10">
           <div className="flex ml-10">
             <div>
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
+                src="https://bandon.vn/uploads/thiet-ke-nha-tro-dep-2020-bandon-28.jpg"
                 alt=""
                 className="h-40 w-60 rounded-xl"
               />
@@ -68,10 +68,10 @@ const ListPost = () => {
                 TIỆN NGHI - TT…
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
-                4.5 triệu/tháng{" "}
+                5 triệu/tháng{" "}
                 <span className="text-black font-thin">30m2</span>
               </p>
-              <p>Quận Cẩm Lệ,Đà Nẵng</p>
+              <p>Quận Thanh Khê,Đà Nẵng</p>
               <div className="flex">
                 <img
                   src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/428603879_3699291333727981_8450238390845543097_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeF8eAl4DqSiHc45WD_3ZUa0Yj2_k1pIrCxiPb-TWkisLKdt4xrCZnSawKeji-j5xGqR90NFt9JrVnVNHzicN-9h&_nc_ohc=rnzU9zsG6hIQ7kNvgH4NySx&_nc_ht=scontent.fdad2-1.fna&oh=00_AYBDhh4h13M-hZxhzak3Cj8YDQ3k8_1KhOMah4vOdofdpA&oe=66F0B305"
@@ -84,7 +84,7 @@ const ListPost = () => {
           </div>
           <Link
             href={""}
-            className="bg-[#0F0E0E] whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2 transform transition-transform duration-300 hover:scale-110"
+            className="bg-[#0F0E0E] text-white whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2 transform transition-transform duration-300 hover:scale-110"
           >
             Cập Nhật
           </Link>
