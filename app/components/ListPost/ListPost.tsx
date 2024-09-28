@@ -39,7 +39,7 @@ const ListPost = () => {
             </div>
           </div>
           <Link
-            href={""}
+            href={"/ShowUpdatePost"}
             className="bg-[#0F0E0E] text-white whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2 transform transition-transform duration-300 hover:scale-110"
           >
             Cập Nhật
@@ -68,8 +68,7 @@ const ListPost = () => {
                 TIỆN NGHI - TT…
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
-                5 triệu/tháng{" "}
-                <span className="text-black font-thin">30m2</span>
+                5 triệu/tháng <span className="text-black font-thin">30m2</span>
               </p>
               <p>Quận Thanh Khê,Đà Nẵng</p>
               <div className="flex">
@@ -83,7 +82,7 @@ const ListPost = () => {
             </div>
           </div>
           <Link
-            href={""}
+            href={"/ShowUpdatePost"}
             className="bg-[#0F0E0E] text-white whitespace-nowrap h-10 px-10 rounded-xl mr-20 mt-24 pt-2 transform transition-transform duration-300 hover:scale-110"
           >
             Cập Nhật

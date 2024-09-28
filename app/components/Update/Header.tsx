@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
@@ -13,9 +12,9 @@ const Header = () => {
   };
 
   // Function to close dropdown when clicking outside
-  //   const closeDropdown = () => {
-  //     setDropdownOpen(false);
-  //   };
+//   const closeDropdown = () => {
+//     setDropdownOpen(false);
+//   };
 
   return (
     <div>
@@ -42,9 +41,7 @@ const Header = () => {
             {isDropdownOpen && (
               <ul className="menu menu-sm dropdown-content bg-[#D9D9D9] rounded-box absolute z-[101] mt-3 w-52 p-2 shadow py-5">
                 <li>
-                  <Link href={"/ShowProfile"} className="justify-between">
-                    Thông tin cá nhân
-                  </Link>
+                  <a className="justify-between">Thông tin cá nhân</a>
                 </li>
                 <li>
                   <a>Đổi mật khẩu</a>
@@ -58,12 +55,9 @@ const Header = () => {
         </div>
 
         <div>
-          <Link
-            href={"/ShowPost"}
-            className="bg-[#F73859] px-5 py-2 rounded-xl hover:bg-red-700"
-          >
+          <button className="bg-[#F73859] px-5 py-2 rounded-xl hover:bg-red-700">
             Đăng tin +
-          </Link>
+          </button>
         </div>
       </div>
       {/* Navbar */}
@@ -72,10 +66,9 @@ const Header = () => {
         className="w-full h-10 mt-2 flex justify-center items-center sticky top-0 z-[100]"
       >
         <div className="flex content-center gap-12">
-          <Link href={"/ShowTrangChu"} className="hover:bg-red-600 py-2 px-2">
+          <a href="" className="hover:bg-red-600 py-2 px-2">
             Trang Chủ
-          </Link>
-
+          </a>
           <a href="" className="hover:bg-red-600 py-2 px-2">
             Cho thuê phòng trọ
           </a>
