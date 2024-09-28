@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
-
+import { CiSearch } from "react-icons/ci";
 const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
@@ -43,7 +43,7 @@ const Header = () => {
               <ul className="menu menu-sm dropdown-content bg-[#D9D9D9] rounded-box absolute z-[101] mt-3 w-52 p-2 shadow py-5">
                 <li>
                   <Link
-                    href={"/ShowAdmin/DashBoard"}
+                    href={"/ShowAdmin/Dashboard"}
                     className="justify-between"
                   >
                     Admin
@@ -90,6 +90,34 @@ const Header = () => {
           <a href="" className="hover:bg-red-600 py-2 px-2">
             Liên hệ
           </a>
+        </div>
+      </div>
+      <div className=" bg-[#FEBB02] w-[1200px] mx-auto h-10 mt-8 rounded-xl mb-10  flex justify-center items-center gap-10">
+        <div className="w-56  ">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Giá"
+            className="bg-[#FFFFFF] absolute right-[1000px] top-[132px]  pl-5 text-black font-medium rounded-xl "
+          />
+        </div>
+        <div className=" w-56 ">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Diện tích"
+            className="absolute right-[750px] top-[132px] bg-[#FFFFFF] pl-5 text-black font-medium rounded-xl"
+          />
+        </div>
+
+        <div className="relative ml-72 flex  ">
+          {/* <p className="pl-20 text-white font-medium">Tìm kiếm</p> */}
+          <button className=" bg-[#0071C2] -bottom-[14px] -right-[132px] -py-5 py-[2px] absolute whitespace-nowrap text-white  font-medium rounded-xl px-14 ">
+            <CiSearch className=" absolute top-[2px] left-0 text-white text-xl " />
+            Tim kiếm
+          </button>
         </div>
       </div>
     </div>
