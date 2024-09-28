@@ -36,14 +36,14 @@ export function DashBoard() {
     },
     {
       label: "Quản lý bình luận",
-      href: "/ShowServiceManager",
+      href: "/ShowAdmin/ShowManagerComment",
       icon: (
         <MdCleaningServices className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Quản lý thuê phòng",
-      href: "#",
+      href: "/ShowAdmin/ShowManagerHireRoom",
       icon: (
         <TbBrandBooking className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
