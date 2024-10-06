@@ -7,10 +7,12 @@ import { FaFacebookMessenger } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa6";
 const Content1 = () => {
   const [isModalOpen, setModalOpen] = useState(false); // State để quản lý hiển thị modal
-
-  const closeModal = () => {
-    setModalOpen(false);
+  const openModal = () => {
+    setModalOpen(true); // Mở modal
   };
+  // const closeModal = () => {
+  //   setModalOpen(false);
+  // };
   return (
     <div className="flex justify-center items-center mt-5">
       <div className="w-[1212px] h-auto bg-[#FFFAFA]">
@@ -28,7 +30,10 @@ const Content1 = () => {
             <button className="w-[170px] h-[48px] bg-[#0071C2] text-[0.875rem] font-semibold text-[#F8EFEF] rounded-2xl ml-[300px] duration-300 hover:bg-gray-400">
               Yêu Thích
             </button>
-            <button className="btn w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12">
+            <button
+              className="btn w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12"
+              onClick={openModal}
+            >
               Thuê Ngay
             </button>
             {isModalOpen && (
