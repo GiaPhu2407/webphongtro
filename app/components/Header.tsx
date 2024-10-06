@@ -162,20 +162,17 @@ const Header = () => {
       <div className="flex flex-wrap">
         {filteredPosts.length ? (
           filteredPosts.map((post) => (
-            <div className=" flex  justify-center items-center">
-              <div
-                key={post.id}
-                className="ml-32 mt-5 bg-slate-50 h-72 w-72 mb-10"
-              >
+            <div key={post.id} className="flex justify-center items-center">
+              <div className="ml-32 mt-5 bg-slate-50 h-72 w-72 mb-10">
                 <div>
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
                     alt=""
-                    className="h-40  rounded-xl  w-full"
+                    className="h-40 rounded-xl w-full"
                   />
                 </div>
                 <div className="ml-7">
-                  <p className="font-semibold text-[#FF0000] ">{post.title}</p>
+                  <p className="font-semibold text-[#FF0000]">{post.title}</p>
                   <p className="text-[#39D336]">
                     {post.price.toLocaleString()} triệu/tháng - {post.area}m²
                   </p>

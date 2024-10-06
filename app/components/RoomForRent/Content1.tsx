@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneVolume } from "react-icons/fa6";
+import { FaFacebookMessenger } from "react-icons/fa";
 
 import { FaRegUser } from "react-icons/fa6";
 const Content1 = () => {
@@ -18,7 +20,7 @@ const Content1 = () => {
             <p className="mt-[15px] ml-20">
               Trạng Thái: <span>Còn Chỗ</span>
             </p>
-            <button className="w-[170px] h-[35px] bg-[#0071C2] text-[#F8EFEF] rounded-2xl ml-[300px]">
+            <button className="w-[170px] h-[48px] bg-[#0071C2] text-[0.875rem] font-semibold text-[#F8EFEF] rounded-2xl ml-[300px] duration-300 hover:bg-gray-400">
               Yêu Thích
             </button>
             <button
@@ -33,20 +35,17 @@ const Content1 = () => {
                   Thông tin Liên Hệ
                 </h3>
                 <div className="py-10 text-center">
-                  <div className="py-10">
-                    <a
-                      href=""
-                      className="w-40 h-20 px-[90px] py-2 bg-[#39D336] rounded-xl"
-                    >
+                  <div className="flex bg-[#39D336] h-10 mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110 ">
+                    <FaPhoneVolume />
+
+                    <a href="" className="w-40 h-20 mt-14  ">
                       0333924997
                     </a>
                   </div>
                   <p className="py-5">Hoặc</p>
-                  <div className="py-10">
-                    <a
-                      href=""
-                      className="w-40 h-20 px-20 py-2 bg-[#D9D9D9] rounded-xl"
-                    >
+                  <div className=" bg-[#D9D9D9] flex h-10  mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110 ">
+                    <FaFacebookMessenger />
+                    <a href="" className="w-40 h-20 mt-14 whitespace-nowrap ">
                       Nhắn tin liên hệ
                     </a>
                   </div>
