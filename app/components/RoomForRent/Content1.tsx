@@ -32,38 +32,37 @@ const Content1 = () => {
             <button className="w-[170px] h-[48px] bg-[#0071C2] text-[0.875rem] font-semibold text-[#F8EFEF] rounded-2xl ml-[300px] duration-300 hover:bg-gray-400">
               Yêu Thích
             </button>
-            <button
-              className="btn w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12"
-              onClick={closeModal}
-            >
+            <button className="btn w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12">
               Thuê Ngay
             </button>
-            <dialog id="my_modal_2" className="modal">
-              <div className="modal-box bg-[#1266DD]">
-                <h3 className="font-bold text-lg text-center">
-                  Thông tin Liên Hệ
-                </h3>
-                <div className="py-10 text-center">
-                  <div className="flex bg-[#39D336] h-10 mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110 ">
-                    <FaPhoneVolume />
+            {isModalOpen && (
+              <dialog id="my_modal_2" className="modal">
+                <div className="modal-box bg-[#1266DD]">
+                  <h3 className="font-bold text-lg text-center">
+                    Thông tin Liên Hệ
+                  </h3>
+                  <div className="py-10 text-center">
+                    <div className="flex bg-[#39D336] h-10 mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110 ">
+                      <FaPhoneVolume />
 
-                    <a href="" className="w-40 h-20 mt-14  ">
-                      0333924997
-                    </a>
-                  </div>
-                  <p className="py-5">Hoặc</p>
-                  <div className=" bg-[#D9D9D9] flex h-10  mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110 ">
-                    <FaFacebookMessenger />
-                    <a href="" className="w-40 h-20 mt-14 whitespace-nowrap ">
-                      Nhắn tin liên hệ
-                    </a>
+                      <a href="" className="w-40 h-20 mt-14  ">
+                        0333924997
+                      </a>
+                    </div>
+                    <p className="py-5">Hoặc</p>
+                    <div className=" bg-[#D9D9D9] flex h-10  mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110 ">
+                      <FaFacebookMessenger />
+                      <a href="" className="w-40 h-20 mt-14 whitespace-nowrap ">
+                        Nhắn tin liên hệ
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <form method="dialog" className="modal-backdrop">
-                <button>close</button>
-              </form>
-            </dialog>
+                <form method="dialog" className="modal-backdrop">
+                  <button>close</button>
+                </form>
+              </dialog>
+            )}
           </div>
         </div>
         {/* ở dưới */}
