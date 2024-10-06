@@ -1,11 +1,20 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { FaFacebookMessenger } from "react-icons/fa";
 
 import { FaRegUser } from "react-icons/fa6";
 const Content1 = () => {
+  const [isModalOpen, setModalOpen] = useState(false); // State để quản lý hiển thị modal
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   return (
     <div className="flex justify-center items-center mt-5">
       <div className="w-[1212px] h-auto bg-[#FFFAFA]">
@@ -25,7 +34,7 @@ const Content1 = () => {
             </button>
             <button
               className="btn w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12"
-              onClick={() => document.getElementById("my_modal_2").showModal()}
+              onClick={closeModal}
             >
               Thuê Ngay
             </button>
