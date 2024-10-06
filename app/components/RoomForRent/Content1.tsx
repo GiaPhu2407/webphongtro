@@ -8,10 +8,6 @@ import { FaRegUser } from "react-icons/fa6";
 const Content1 = () => {
   const [isModalOpen, setModalOpen] = useState(false); // State để quản lý hiển thị modal
 
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
   const closeModal = () => {
     setModalOpen(false);
   };
