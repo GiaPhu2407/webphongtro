@@ -61,8 +61,10 @@ const Content1 = () => {
                   </div>
                 </div>
                 <form method="dialog" className="modal-backdrop">
-                  <button onClick={closeModal}>Đóng</button>{" "}
-                  {/* Sử dụng closeModal để đóng modal */}
+                  <button type="button" onClick={closeModal}>
+                    Đóng
+                  </button>{" "}
+                  {/* Thay đổi ở đây */}
                 </form>
               </dialog>
             )}
