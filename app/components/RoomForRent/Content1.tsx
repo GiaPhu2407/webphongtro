@@ -10,9 +10,7 @@ const Content1 = () => {
   const openModal = () => {
     setModalOpen(true); // Mở modal
   };
-  // const closeModal = () => {
-  //   setModalOpen(false);
-  // };
+
   return (
     <div className="flex justify-center items-center mt-5">
       <div className="w-[1212px] h-auto bg-[#FFFAFA]">
