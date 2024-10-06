@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
@@ -7,7 +8,7 @@ const Content1 = () => {
     <div className="flex justify-center items-center mt-5">
       <div className="w-[1212px] h-auto bg-[#FFFAFA]">
         <div className="ml-10 mt-2">
-          <p className="">Ký túc xá tây đông</p>
+          <p className="">Phòng trọ Hải Châu</p>
           <div className="flex">
             <FaMapMarkerAlt className="mt-[3px]" />
             <p>Địa chỉ: 141/45 Tiểu La, Phường Hòa Cường Bắc, Quận Hải Châu</p>
@@ -20,9 +21,41 @@ const Content1 = () => {
             <button className="w-[170px] h-[35px] bg-[#0071C2] text-[#F8EFEF] rounded-2xl ml-[300px]">
               Yêu Thích
             </button>
-            <button className="w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12">
+            <button
+              className="btn w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12"
+              onClick={() => document.getElementById("my_modal_2").showModal()}
+            >
               Thuê Ngay
             </button>
+            <dialog id="my_modal_2" className="modal">
+              <div className="modal-box bg-[#1266DD]">
+                <h3 className="font-bold text-lg text-center">
+                  Thông tin Liên Hệ
+                </h3>
+                <div className="py-10 text-center">
+                  <div className="py-10">
+                    <a
+                      href=""
+                      className="w-40 h-20 px-[90px] py-2 bg-[#39D336] rounded-xl"
+                    >
+                      0333924997
+                    </a>
+                  </div>
+                  <p className="py-5">Hoặc</p>
+                  <div className="py-10">
+                    <a
+                      href=""
+                      className="w-40 h-20 px-20 py-2 bg-[#D9D9D9] rounded-xl"
+                    >
+                      Nhắn tin liên hệ
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <form method="dialog" className="modal-backdrop">
+                <button>close</button>
+              </form>
+            </dialog>
           </div>
         </div>
         {/* ở dưới */}

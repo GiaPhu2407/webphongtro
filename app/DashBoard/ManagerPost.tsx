@@ -182,8 +182,8 @@ const Dashboard = () => {
             <div className="ml-1">
               <p className="w-[50%] text-[#FF0000] font-semibold">
                 {" "}
-                GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG, UEF - AN NINH,
-                TIỆN NGHI - TT…
+                GẦN TRƯỜNG ĐH DUY TÂN (1km), SƯ PHẠM (2km).... - AN NINH, TIỆN
+                NGHI - TT…
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
                 4.5 triệu/tháng{" "}
@@ -222,8 +222,8 @@ const Dashboard = () => {
             <div className="ml-1">
               <p className="w-[50%] text-[#FF0000] font-semibold">
                 {" "}
-                GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG, UEF - AN NINH,
-                TIỆN NGHI - TT…
+                GẦN TRƯỜNG ĐH DUY TÂN (1km), SƯ PHẠM (2km).... - AN NINH, TIỆN
+                NGHI - TT…
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
                 4.5 triệu/tháng{" "}
@@ -262,11 +262,10 @@ const Dashboard = () => {
             <div className="ml-1">
               <p className="w-[50%] text-[#FF0000] font-semibold">
                 {" "}
-                GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG, UEF - AN NINH,
-                TIỆN NGHI - TT…
+                GẦN TRƯỜNG ĐÔNG Á ,DUY TÂN, KIẾN TRÚC , AN NINH, TIỆN NGHI - TT…
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
-                4.5 triệu/tháng{" "}
+                3.0 triệu/tháng{" "}
                 <span className="text-black font-thin">30m2</span>
               </p>
               <p>Quận Cẩm Lệ,Đà Nẵng</p>
@@ -302,11 +301,10 @@ const Dashboard = () => {
             <div className="ml-1">
               <p className="w-[50%] text-[#FF0000] font-semibold">
                 {" "}
-                GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG, UEF - AN NINH,
-                TIỆN NGHI - TT…
+                GẦN TRƯỜNG ĐÔNG Á ,DUY TÂN, KIẾN TRÚC , AN NINH, TIỆN NGHI - TT…
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
-                4.5 triệu/tháng{" "}
+                3.0 triệu/tháng{" "}
                 <span className="text-black font-thin">30m2</span>
               </p>
               <p>Quận Cẩm Lệ,Đà Nẵng</p>
@@ -342,11 +340,11 @@ const Dashboard = () => {
             <div className="ml-1">
               <p className="w-[50%] text-[#FF0000] font-semibold">
                 {" "}
-                GẦN TRƯỜNG GTVT, NGOẠI THƯƠNG, HUTECH, HỒNG BÀNG, UEF - AN NINH,
-                TIỆN NGHI - TT…
+                GẦN TRƯỜNG ĐÔNG Á ,DUY TÂN, KIẾN TRÚC , AN NINH, TIỆN NGHI - TT…
+
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
-                4.5 triệu/tháng{" "}
+                3.0 triệu/tháng{" "}
                 <span className="text-black font-thin">30m2</span>
               </p>
               <p>Quận Cẩm Lệ,Đà Nẵng</p>
