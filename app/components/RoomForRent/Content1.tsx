@@ -33,44 +33,45 @@ const Content1 = () => {
               Yêu Thích
             </button>
             <button
-              className="btn w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12"
+              className="w-[170px] h-[35px] bg-[#F73859] text-[#F8EFEF] rounded-2xl ml-12"
               onClick={openModal}
             >
               Thuê Ngay
             </button>
+
             {isModalOpen && (
-              <dialog id="my_modal_2" className="modal">
-                <div className="modal-box bg-[#1266DD]">
-                  <h3 className="font-bold text-lg text-center">
+              <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75">
+                <div className="modal-box bg-[#1266DD] p-6 rounded-lg shadow-lg">
+                  <h3 className="font-bold text-lg text-center text-white">
                     Thông tin Liên Hệ
                   </h3>
                   <div className="py-10 text-center">
-                    <div className="flex bg-[#39D336] h-10 mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110 ">
+                    <div className="flex bg-[#39D336] h-10 mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110">
                       <FaPhoneVolume />
-                      <a href="" className="w-40 h-20 mt-14">
+                      <a href="tel:0333924997" className="ml-2 text-white">
                         0333924997
                       </a>
                     </div>
-                    <p className="py-5">Hoặc</p>
-                    <div className="bg-[#D9D9D9] flex h-10  mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110 ">
+                    <p className="py-5 text-white">Hoặc</p>
+                    <div className="bg-[#D9D9D9] flex h-10 mx-11 justify-center items-center rounded-xl transform transition-transform duration-300 cursor-pointer hover:scale-110">
                       <FaFacebookMessenger />
-                      <a href="" className="w-40 h-20 mt-14 whitespace-nowrap ">
+                      <a href="" className="ml-2">
                         Nhắn tin liên hệ
                       </a>
                     </div>
                   </div>
-                </div>
-                <form method="dialog" className="modal-backdrop">
-                  <button type="button" onClick={closeModal}>
+                  <button
+                    className="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg"
+                    onClick={closeModal}
+                  >
                     Đóng
-                  </button>{" "}
-                  {/* Thay đổi ở đây */}
-                </form>
-              </dialog>
+                  </button>
+                </div>
+              </div>
             )}
           </div>
         </div>
-        {/* ở dưới */}
+        {/* Dưới đây là phần nội dung khác */}
         <div className="ml-10">
           <p className="text-xl mt-2">Thông tin mô tả</p>
           <p className="mt-2">

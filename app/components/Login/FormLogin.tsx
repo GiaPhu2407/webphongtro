@@ -1,7 +1,33 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const FormLogin = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
+
+    const response = await fetch("http://localhost:3001/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      // Xử lý khi đăng nhập thành công
+      console.log("Login successful:", data);
+    } else {
+      // Xử lý khi có lỗi
+      console.error("Login failed:", data);
+    }
+  };
+
   return (
     <div className="flex justify-center items-center mt-5">
       <div className="flex justify-center items-center h-full w-full">
@@ -11,22 +37,24 @@ const FormLogin = () => {
             className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl"
           >
             <div className="border-8 border-transparent rounded-xl bg-white dark:bg-gray-900 shadow-xl p-8 m-2">
-              <h1 className="text-3xl font-bold text-center  dark:text-gray-300 text-gray-900">
+              <h1 className="text-3xl font-bold text-center dark:text-gray-300 text-gray-900">
                 Đăng Nhập
               </h1>
-              <form action="#" method="post" className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label
-                    htmlFor="tên tài khoản"
+                    htmlFor="username"
                     className="block mb-2 text-lg dark:text-gray-300"
                   >
                     Tên tài khoản
                   </label>
                   <input
-                    id="email"
+                    id="username"
                     className="border p-3 shadow-md dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-500 transition transform hover:scale-105 duration-300"
-                    type="tên tài khoản"
+                    type="text"
                     placeholder="Tên tài khoản"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                 </div>
                 <div>
@@ -41,6 +69,8 @@ const FormLogin = () => {
                     className="border p-3 shadow-md dark:bg-indigo-700 dark:text-gray-300 dark:border-gray-700 border-gray-300 rounded-lg w-full focus:ring-2 focus:ring-blue-500 transition transform hover:scale-105 duration-300"
                     type="password"
                     placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <Link
