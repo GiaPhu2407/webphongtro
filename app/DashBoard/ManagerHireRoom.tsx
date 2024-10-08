@@ -9,7 +9,6 @@ import { MdCleaningServices } from "react-icons/md";
 import { TbBrandBooking } from "react-icons/tb";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
-import { FaChartLine } from "react-icons/fa";
 import Header from "./Header";
 import { cn } from "@/lib/utils";
 
