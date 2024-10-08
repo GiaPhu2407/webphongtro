@@ -50,7 +50,7 @@ export function DashBoard() {
     },
     {
       label: "Quản lý tài khoản người dùng",
-      href: "/ShowRoomManger",
+      href: "/ShowAdmin/ShowManagerUser",
       icon: (
         <MdOutlineBedroomParent className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -60,13 +60,6 @@ export function DashBoard() {
       href: "#",
       icon: (
         <IoIosInformationCircleOutline className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    {
-      label: "Gửi thông báo",
-      href: "#",
-      icon: (
-        <FaChartLine className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
   ];

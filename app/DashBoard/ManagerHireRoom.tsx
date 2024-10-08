@@ -49,11 +49,7 @@ export function ManagerHireRoom() {
       href: "#",
       icon: <IoIosInformationCircleOutline className="h-5 w-5" />,
     },
-    {
-      label: "Gửi thông báo",
-      href: "#",
-      icon: <FaChartLine className="h-5 w-5" />,
-    },
+    
   ];
   const [open, setOpen] = useState(false);
 

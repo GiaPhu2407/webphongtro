@@ -59,13 +59,6 @@ export function ManagerPost() {
         <IoIosInformationCircleOutline className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
-    {
-      label: "Gửi thông báo",
-      href: "#",
-      icon: (
-        <FaChartLine className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
   ];
   const [open, setOpen] = useState(false);
   return (
@@ -341,7 +334,6 @@ const Dashboard = () => {
               <p className="w-[50%] text-[#FF0000] font-semibold">
                 {" "}
                 GẦN TRƯỜNG ĐÔNG Á ,DUY TÂN, KIẾN TRÚC , AN NINH, TIỆN NGHI - TT…
-
               </p>
               <p className="text-[#39D336] text-sm font-semibold">
                 3.0 triệu/tháng{" "}
