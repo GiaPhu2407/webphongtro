@@ -49,14 +49,14 @@ export function DashBoard() {
     },
     {
       label: "Quản lý tài khoản người dùng",
-      href: "/ShowAdmin/ShowManagerUser",
+      href: "/ShowAdmin/ShowManagerUsers",
       icon: (
         <MdOutlineBedroomParent className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Quản lý tài khoản chủ trọ",
-      href: "#",
+      href: "/ShowAdmin/ShowManagerAccinnkeeper",
       icon: (
         <IoIosInformationCircleOutline className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),

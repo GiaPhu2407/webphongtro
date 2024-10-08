@@ -4,19 +4,17 @@ import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import { IconBrandTabler } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
+import { FaCircleCheck } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { GrUserManager } from "react-icons/gr";
 import { MdCleaningServices } from "react-icons/md";
 import { TbBrandBooking } from "react-icons/tb";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
-
-import { IoArrowBackCircle } from "react-icons/io5";
-
+import { FaUser } from "react-icons/fa";
 import Header from "./Header";
-
-export function Details() {
+import { MdDelete } from "react-icons/md";
+export function ManagerAccinnkeeper() {
   const links = [
     {
       label: "Dashboard",
@@ -143,79 +141,89 @@ export const LogoIcon = () => {
   );
 };
 
-// Dummy dashboard component with content
-const Dashboard = () => {
+export const Dashboard = () => {
+  // Danh sách các bình luận
+  const [comments, setComments] = useState([
+    {
+      id: 1,
+      username: "@lehuy1234",
+    },
+    {
+      id: 2,
+      username: "@giaphu",
+    },
+    {
+      id: 3,
+      username: "@viet",
+    },
+    {
+      id: 4,
+      username: "@thinh",
+    },
+  ]);
+
+  // State để quản lý việc hiển thị thông báo
+  const [deleteMessage, setDeleteMessage] = useState<string>("");
+
+  // Hàm xử lý sự kiện xoá
+  const handleDelete = (commentId: string | number) => {
+    setComments((prevComments) =>
+      prevComments.filter((comment) => comment.id !== commentId)
+    );
+
+    setDeleteMessage("Đã xóa tài khoản");
+    setTimeout(() => {
+      setDeleteMessage("");
+    }, 3000);
+  };
+
   return (
     <div className="ml-10">
-      <div className=" inline-block mb-5 mt-1">
+      <div className="inline-block mb-5 mt-4">
         {/* Button content */}
         <a
           href="#"
           className="bg-gradient-to-r from-blue-400 to-pink-500 text-white font-bold py-2 px-4 rounded-l-full relative z-10"
         >
-          Quản Lý Bài Đăng
+          Quản Lý Người dùng
         </a>
-        {/* Arrow part */}
-        <div className="h-full w-6 bg-gradient-to-r from-blue-400 to-pink-500 skew-x-[-30deg]"></div>
-      </div>
-      <div className="border-2 w-[1026px] h-[1256px]">
-        <div className="flex mb-2">
-          <Link href="/ShowAdmin/ShowManagerPost">
-            <IoArrowBackCircle className="text-2xl mt-6 ml-6 text-purple-500 transition-transform transform hover:scale-110" />
-          </Link>
 
-          <p className=" mt-6 font-semibold ">Chi tiết bài đăng</p>
+        {/* bài đăng 1 */}
+        <div className=" w-[1052px] h-[1020px] mt-4">
+          <p className="ml-5 mb-10">Số lượng người dùng:4</p>
+
+          {/* Danh sách bình luận */}
+          {comments.map((comment) => (
+            <div
+              key={comment.id}
+              className="flex  items-center ml-10 mt-10"
+            >
+              <div>
+                <FaUser />
+              </div>
+              <div className="ml-6">
+                <p>{comment.username}</p>
+              </div>
+              <div className="flex ml-auto gap-10 mt-1 items-center">
+                <FaCircleCheck className="text-green-500 text-xl" />
+                <p>Duyệt</p>
+                <MdDelete
+                  className="text-red-600 text-xl cursor-pointer"
+                  onClick={() => handleDelete(comment.id)}
+                />
+                <p className="mr-4">Xoá</p>
+              </div>
+            </div>
+          ))}
+
+          {/* Thông báo khi xóa */}
+          {deleteMessage && (
+            <p className="text-red-500 mt-2">{deleteMessage}</p>
+          )}
         </div>
-
-        <div>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP8Zb0j-VI4vNjGBp4knIPg6W1KyFkKVKtp_Ga7DJnw5DBSwBQv2lRlVw3OG7Fg3VocVI&usqp=CAU"
-            alt=""
-            className="ml-10"
-          />
-          <p className="ml-10 text-2xl text-[#FA0404] mt-3">
-            Ký túc xá tây đông
-          </p>
-
-          <div className="flex justify-around mt-2">
-            <p>
-              Địa chỉ: Đường Nguyễn Xuân Hữu, Phường Hòa Thọ Đông, Quận Cẩm Lệ,
-              Đà Nẵng
-            </p>
-            <p> Người đăng: Nhà trọ ngỏ sen</p>
-          </div>
-          <div className="flex gap-10 mt-2 ml-5">
-            <p className="text-[#39D336] text-2xl mt-4">1,6 triệu/tháng</p>
-            <p className="mt-5"> Trạng Thái:Còn Chỗ</p>
-            <button className="bg-[#39D336] px-7 py-3 rounded-3xl ml-20">
-              Duyệt Bài
-            </button>
-            <button className="bg-[#F73859]  px-7 py-3 rounded-3xl">
-              Xoá bài
-            </button>
-          </div>
-        </div>
-        <div className="border-[1px] border-black mt-5"></div>
-        <p className="ml-10">
-          Thông tin mô tả <br />
-          free 100% tiền phòng tháng đầu <br />
-          Vị trí: Gần công viên Hoàng Văn Thái <br />- Gần trường Đại học Đông Á{" "}
-          <br />- Thuận đường đi qua các Quận Cẩm lệ, <br />
-          --- <br />
-          Mỗi bạn một không gian riêng, tủ đồ riêng. <br />
-          Bếp sử dụng chung. <br />
-          Có máy lạnh, máy giặt. <br />
-          Wifi dùng tẹt ga. <br />
-          Ra vào bằng cửa khóa vân tay. <br />
-          Tòa nhà có thang máy, hầm giữ xe. <br />
-          Bảo vệ và quản lý 24/7. <br />
-          --- <br />
-          Giá siêu ưu đãi: Chỉ 1.600.000đ/tháng. <br />
-          Bao full chi phí điện nước và internet. <br />
-          Địa chỉ: 71 Nguyễn Xuân Hửu P. HTD, Cẩm Lệ.
-        </p>
       </div>
     </div>
   );
 };
-export default Details;
+
+export default ManagerAccinnkeeper;

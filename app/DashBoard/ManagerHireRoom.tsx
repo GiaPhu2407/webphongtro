@@ -40,12 +40,12 @@ export function ManagerHireRoom() {
     },
     {
       label: "Quản lý tài khoản người dùng",
-      href: "/ShowRoomManger",
+      href: "/ShowAdmin/ShowManagerUsers",
       icon: <MdOutlineBedroomParent className="h-5 w-5" />,
     },
     {
       label: "Quản lý tài khoản chủ trọ",
-      href: "#",
+      href: "/ShowAdmin/ShowManagerAccinnkeeper",
       icon: <IoIosInformationCircleOutline className="h-5 w-5" />,
     },
     
@@ -162,7 +162,7 @@ export const Dashboard = () => {
     },
     {
       id: 3,
-      tenkhachang: "@vietngu",
+      tenkhachang: "@viet",
       idbaidang: "3",
       TenChuTro: "Lê Huy",
       NgayThue: "22/11/2024",
