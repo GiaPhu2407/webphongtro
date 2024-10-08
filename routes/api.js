@@ -30,13 +30,14 @@ routerAPI.get('/', (req, res)=> {
     res.render('home', {user: req.user});
 });
 
-routerAPI.get('/dashboard', authenticateToken, (req, res)=> {
+routerAPI.get('/ShowAdmin/Dashboard', authenticateToken, (req, res) => {
     if(req.user.rule === "admin") {
-        res.render('dashboard', {user: req.user});
-    }else { 
+        res.render('ShowAdmin/Dashboard', { user: req.user }); // Lưu ý sử dụng đúng đường dẫn trong render
+    } else { 
         res.status(403).send("access denied");
     }
 });
+
 //form foget pass
 routerAPI.get('/password/reset', (req, res) => {
     res.render('passwords/email');

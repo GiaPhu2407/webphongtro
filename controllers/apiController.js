@@ -85,10 +85,11 @@ const postLoginUsersAPI = async (req, res) => {
 
       // Kiểm tra quyền để chuyển hướng
       if (user.rule === "admin") {
-        res.redirect("/dashboard");
+        res.redirect("/ShowAdmin/Dashboard"); 
       } else {
         res.redirect("/");
       }
+      
     } else {
       // Nếu mật khẩu sai
       return res
@@ -343,4 +344,4 @@ const createAdminAccount = async (FullName, Email, Username, Password, PhoneNumb
 };
 
 // Gọi hàm để tạo tài khoản admin
-createAdminAccount('huystupid', 'huyngu@example.com', 'huystupid', 'huystupid', '0123456789', '1990-01-01', 'Male');
+// createAdminAccount('huystupid', 'huyngu@example.com', 'huystupid', 'huystupid', '0123456789', '1990-01-01', 'Male');

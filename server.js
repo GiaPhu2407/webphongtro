@@ -11,7 +11,9 @@ const app = express();
 // Sử dụng CORS
 app.use(cors({
   origin: 'http://localhost:3000', // URL FE của bạn
-  credentials: true // Nếu bạn sử dụng cookie để lưu token JWT
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Nếu bạn sử dụng cookie để lưu token JWT
+  preflightContinue: false,
 }));
 
 // Middleware để xử lý dữ liệu từ form
@@ -24,8 +26,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware cookie
 app.use(cookieParser());
 
-app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+console.log(path.join(__dirname, 'views'));
 
 // Sử dụng router
 app.use(APIRouter);
