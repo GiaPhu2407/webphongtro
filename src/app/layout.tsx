@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/toaster"
- 
+import { Toaster } from "@/components/ui/toaster";
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
 export const metadata: Metadata = {
-  title: "Laptop World",
+  title: "PhongTro247",
 };
 
 export default function RootLayout({
@@ -20,8 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={fontSans.className}>
-      <Toaster />
-        {children}</body>
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }

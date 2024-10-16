@@ -97,11 +97,12 @@ const Footer = () => {
         Tổng đài CSKH: 0333924997 <br />
         Copyright © 2015 - 2024 Phongtro123.com <br />
         Email: cskh.phongtro123@gmail.com <br />
-        Địa chỉ: Căn 02.34, Lầu 2, Tháp 3, The Sun Avenue, Số 28 Mai Chí Thọ,
-        Phường An Phú, Thành phố Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam <br />
+        Địa chỉ: Số 123 Đường Nguyễn Văn Linh, Phường Vĩnh Trung, Quận Thanh
+        Khê, Thành phố Đà Nẵng, Việt Nam <br />
         Giấy phép đăng ký kinh doanh số 0313588502 do Sở kế hoạch và Đầu tư
-        thành phố Hồ Chí Minh cấp ngày 24 tháng 12 năm 2015.
+        thành phố Đà Nẵng cấp ngày 24 tháng 12 năm 2015.
       </p>
+
       <div className="flex justify-center items-center">
         <Link href={""}>
           <img

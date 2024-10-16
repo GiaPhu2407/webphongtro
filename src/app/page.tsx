@@ -1,21 +1,9 @@
 "use client";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 import { Header } from "../components/component/header";
-import { FaUser } from "react-icons/fa";
-import { FaRegHeart } from "react-icons/fa";
-import { CiSearch } from "react-icons/ci";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Laptop, Search, ShoppingCart } from "lucide-react";
-import { Input } from "@/components/ui/input";
+
 import Link from "next/link";
 import { useState } from "react";
 import Carousel from "@/components/component/Carousel";
@@ -31,15 +19,15 @@ interface Post {
 export default function Home() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  // Function to toggle dropdown visibility
+ 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
   const [price, setPrice] = useState("");
   const [area, setArea] = useState("");
-  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]); // Correctly type the state
+  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]); 
 
-  // Sample posts data (replace with your actual data source)
+  
   const posts: Post[] = [
     {
       id: 1,
@@ -59,7 +47,7 @@ export default function Home() {
     {
       id: 3,
       title: "GẦN TRƯỜNG ĐH DUY TÂN",
-      price: 3000000,
+      price: 2000000,
       area: 20,
       location: "Quận Hải Châu, Đà Nẵng",
     },
@@ -67,7 +55,7 @@ export default function Home() {
     {
       id: 4,
       title: "GẦN TRƯỜNG ĐH DUY TÂN",
-      price: 2000000,
+      price: 2500000,
       area: 10,
       location: "Quận Thanh Khê, Đà Nẵng",
     },
