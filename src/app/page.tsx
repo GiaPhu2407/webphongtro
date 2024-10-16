@@ -15,19 +15,18 @@ interface Post {
   price: number;
   area: number;
   location: string;
+  image: string;
 }
 export default function Home() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
- 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
   const [price, setPrice] = useState("");
   const [area, setArea] = useState("");
-  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]); 
+  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
 
-  
   const posts: Post[] = [
     {
       id: 1,
@@ -35,6 +34,8 @@ export default function Home() {
       price: 4500000,
       area: 40,
       location: "Quận Cẩm Lệ, Đà Nẵng",
+      image:
+        "https://spacet-release.s3.ap-southeast-1.amazonaws.com/img/blog/2023-10-04/mau-thiet-ke-gac-lung-pho-thong-651cda6ec9649b0ef5c6f6ff.webp",
     },
     {
       id: 2,
@@ -42,6 +43,8 @@ export default function Home() {
       price: 3000000,
       area: 30,
       location: "Quận Liên Chiểu, Đà Nẵng",
+      image:
+        "https://s-housing.vn/wp-content/uploads/2022/09/thiet-ke-phong-tro-dep-7.jpg",
     },
     // Add more posts as needed
     {
@@ -50,6 +53,8 @@ export default function Home() {
       price: 2000000,
       area: 20,
       location: "Quận Hải Châu, Đà Nẵng",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwLGTjVtDm0N_-YD6yFE-ccPjGGxnKISCPbg&s",
     },
     // Add more posts as needed
     {
@@ -58,6 +63,8 @@ export default function Home() {
       price: 2500000,
       area: 10,
       location: "Quận Thanh Khê, Đà Nẵng",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuEUh-oh9tls6lJ4yxgDSm1GJDa5IJbe2wtQ&s",
     },
     // Add more posts as needed
   ];
@@ -114,8 +121,8 @@ export default function Home() {
                 <div className="ml-32 mt-5 bg-slate-50 h-72 w-72 mb-10">
                   <div>
                     <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
-                      alt=""
+                      src={post.image}
+                      alt={post.title}
                       className="h-40 rounded-xl w-full"
                     />
                   </div>

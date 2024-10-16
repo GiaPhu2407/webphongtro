@@ -23,7 +23,7 @@ export default function LoginPage() {
   const { toast } = useToast();
 
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+ 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
