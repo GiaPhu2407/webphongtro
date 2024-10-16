@@ -94,7 +94,7 @@ const Footer = () => {
 
       <p className="text-center mt-6">
         CÔNG TY TNHH LBKCORP <br />
-        Tổng đài CSKH: 0917686101 <br />
+        Tổng đài CSKH: 0333924997 <br />
         Copyright © 2015 - 2024 Phongtro123.com <br />
         Email: cskh.phongtro123@gmail.com <br />
         Địa chỉ: Căn 02.34, Lầu 2, Tháp 3, The Sun Avenue, Số 28 Mai Chí Thọ,
