@@ -61,7 +61,7 @@ export default function Home() {
       title: "GẦN TRƯỜNG ĐH DUY TÂN",
       price: 3000000,
       area: 20,
-      location: "Quận Liên Chiểu, Đà Nẵng",
+      location: "Quận Hải Châu, Đà Nẵng",
     },
     // Add more posts as needed
     {
@@ -69,7 +69,7 @@ export default function Home() {
       title: "GẦN TRƯỜNG ĐH DUY TÂN",
       price: 2000000,
       area: 10,
-      location: "Quận Liên Chiểu, Đà Nẵng",
+      location: "Quận Thanh Khê, Đà Nẵng",
     },
     // Add more posts as needed
   ];
@@ -121,27 +121,29 @@ export default function Home() {
       <div className="flex flex-wrap">
         {filteredPosts.length ? (
           filteredPosts.map((post) => (
-            <div key={post.id} className="flex justify-center items-center">
-              <div className="ml-32 mt-5 bg-slate-50 h-72 w-72 mb-10">
-                <div>
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
-                    alt=""
-                    className="h-40 rounded-xl w-full"
-                  />
-                </div>
-                <div className="ml-7">
-                  <p className="font-semibold text-[#FF0000]">{post.title}</p>
-                  <p className="text-[#39D336]">
-                    {post.price.toLocaleString()} triệu/tháng - {post.area}m²
-                  </p>
-                  <p>{post.location}</p>
+            <Link href={`/ShowRoomForRent`} key={post.id}>
+              <div className="flex justify-center items-center">
+                <div className="ml-32 mt-5 bg-slate-50 h-72 w-72 mb-10">
+                  <div>
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwM9ngYtyaiig-XhzL0ndyIU8oG5Qkyov6A&s"
+                      alt=""
+                      className="h-40 rounded-xl w-full"
+                    />
+                  </div>
+                  <div className="ml-7">
+                    <p className="font-semibold text-[#FF0000]">{post.title}</p>
+                    <p className="text-[#39D336]">
+                      {post.price.toLocaleString()} triệu/tháng - {post.area}m²
+                    </p>
+                    <p>{post.location}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))
         ) : (
-          <p className="ml-32 hidden">No results found</p>
+          <p className="ml-32 hidden"></p>
         )}
       </div>
 
