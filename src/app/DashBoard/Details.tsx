@@ -14,7 +14,7 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 
 import { IoArrowBackCircle } from "react-icons/io5";
 
-import Header from "./Header";
+import { Header } from "@/components/header1";
 
 export function Details() {
   const links = [

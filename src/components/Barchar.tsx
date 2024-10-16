@@ -107,7 +107,7 @@ const data = {
   labels: ["January", "Febuary", "March", "April", "May", "June", "July"],
   datasets: [
     {
-      label: "Bar Chart An Bình Demo",
+      label: "Bar Chart Demo",
       data: [65, 69, 59, 82, 45, 43, 52],
       backgroundColor: [
         "rgba(255, 99, 132, 0.2)",

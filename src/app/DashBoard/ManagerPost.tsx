@@ -13,7 +13,7 @@ import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 
-import Header from "./Header";
+import { Header } from "@/components/header1";
 export function ManagerPost() {
   const links = [
     {

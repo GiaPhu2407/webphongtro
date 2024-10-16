@@ -9,7 +9,7 @@ import { MdCleaningServices } from "react-icons/md";
 import { TbBrandBooking } from "react-icons/tb";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
-import Header from "./Header";
+import { Header } from "@/components/header1";
 import { cn } from "@/lib/utils";
 
 export function ManagerHireRoom() {

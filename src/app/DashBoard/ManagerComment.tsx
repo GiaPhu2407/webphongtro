@@ -12,7 +12,7 @@ import { TbBrandBooking } from "react-icons/tb";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
-import Header from "./Header";
+import { Header } from "@/components/header1";
 import { MdDelete } from "react-icons/md";
 export function ManagerComment() {
   const links = [

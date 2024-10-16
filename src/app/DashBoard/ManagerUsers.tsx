@@ -12,7 +12,7 @@ import { TbBrandBooking } from "react-icons/tb";
 import { MdOutlineBedroomParent } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
-import Header from "./Header";
+import { Header } from "@/components/header1";
 import { MdDelete } from "react-icons/md";
 export function ManagerUsers() {
   const links = [
@@ -194,7 +194,10 @@ export const Dashboard = () => {
 
           {/* Danh sách bình luận */}
           {comments.map((comment) => (
-            <div key={comment.id} className="flex mt-1 items-center ml-10 mt-10">
+            <div
+              key={comment.id}
+              className="flex mt-1 items-center ml-10 mt-10"
+            >
               <div>
                 <FaUser />
               </div>

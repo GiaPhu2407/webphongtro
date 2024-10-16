@@ -64,11 +64,6 @@ export function Header() {
                       {userData?.name}
                     </div>
 
-                    <Link href={"/ShowPost"}>
-                      <Button variant={"blue"} className="me-2">
-                        Đăng tin +
-                      </Button>
-                    </Link>
                     <Button variant={"destructive"} onClick={onLogout}>
                       Logout
                     </Button>
