@@ -8,6 +8,7 @@ import { checkUniqueEmail, registerUser } from "../(functionHandler)/function";
 import { Header } from "@/components/component/header";
 import Footer from "@/components/component/Footer";
 import Content from "@/components/component/ListLiKe/Content";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai"; // Thay thế Heroicons bằng React Icons
 
 export default function Page() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,10 @@ export default function Page() {
 
   const [error, setError] = useState("");
   const { toast } = useToast();
+
+  // State để điều khiển hiển thị mật khẩu
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleChange = (e: any) => {
     setFormData({
@@ -43,31 +48,51 @@ export default function Page() {
     const { fullname, phoneNumber, email, password, confirmPassword } =
       formData;
 
-    if (!validatePhoneNumber(phoneNumber)) {
-      setError("Invalid phone number");
+    if (fullname.includes("@")) {
+      setError("Tên không được chứa ký tự '@'");
       toast({
-        title: "Validation Error!",
-        description: "Invalid phone number - Please try again.",
+        title: "Lỗi xác thực!",
+        description: "Tên không được chứa ký tự '@'. Vui lòng thử lại.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (fullname.length < 8) {
+      setError("Tên phải có ít nhất 8 ký tự");
+      toast({
+        title: "Lỗi xác thực!",
+        description: "Tên phải có ít nhất 8 ký tự. Vui lòng thử lại.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!validatePhoneNumber(phoneNumber)) {
+      setError("Số điện thoại không hợp lệ");
+      toast({
+        title: "Lỗi xác thực!",
+        description: "Số điện thoại không hợp lệ - Vui lòng thử lại.",
         variant: "destructive",
       });
       return;
     }
 
     if (!validateEmail(email)) {
-      setError("Invalid email");
+      setError("Email không hợp lệ");
       toast({
-        title: "Validation Error!",
-        description: "Invalid email - Please try again.",
+        title: "Lỗi xác thực!",
+        description: "Email không hợp lệ - Vui lòng thử lại.",
         variant: "destructive",
       });
       return;
     }
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setError("Mật khẩu không khớp");
       toast({
-        title: "Validation Error!",
-        description: "Passwords do not match - Please try again.",
+        title: "Lỗi xác thực!",
+        description: "Mật khẩu không khớp - Vui lòng thử lại.",
         variant: "destructive",
       });
       return;
@@ -77,10 +102,10 @@ export default function Page() {
     console.log("isUnique:", isUnique);
 
     if (isUnique) {
-      setError("Email already exists");
+      setError("Email đã tồn tại");
       toast({
-        title: "Validation Error!",
-        description: "Email already exists - Please try again.",
+        title: "Lỗi xác thực!",
+        description: "Email đã tồn tại - Vui lòng thử lại.",
         variant: "destructive",
       });
       return;
@@ -95,8 +120,8 @@ export default function Page() {
     };
     await registerUser(result);
     toast({
-      title: "Success!",
-      description: "Account registered successfully.",
+      title: "Thành công!",
+      description: "Tài khoản đã được đăng ký thành công.",
       variant: "success",
     });
   };
@@ -107,31 +132,31 @@ export default function Page() {
       <div className="flex min-h-screen items-center justify-center bg-gray-100 dark:bg-gray-950">
         <div className="w-full max-w-md space-y-6 rounded-lg bg-white p-6 shadow-lg dark:bg-gray-900">
           <div className="space-y-2 text-center">
-            <h1 className="text-3xl font-bold">Register</h1>
+            <h1 className="text-3xl font-bold">Đăng ký</h1>
             <p className="text-gray-500 dark:text-gray-400">
-              Create an account to get started.
+              Tạo tài khoản để bắt đầu.
             </p>
           </div>
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name">Họ và tên</Label>
                 <Input
                   id="name"
                   name="fullname"
-                  placeholder="John Doe"
+                  placeholder=""
                   required
                   value={formData.fullname}
                   onChange={handleChange}
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="phone">Phone Number</Label>
+                <Label htmlFor="phone">Số điện thoại</Label>
                 <Input
                   id="phone"
                   type="tel"
                   name="phoneNumber"
-                  placeholder="+1 (555) 555-5555"
+                  placeholder="+84 (555) 555-5555"
                   required
                   value={formData.phoneNumber}
                   onChange={handleChange}
@@ -150,31 +175,56 @@ export default function Page() {
                 onChange={handleChange}
               />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+
+            {/* Mật khẩu với biểu tượng con mắt */}
+            <div className="space-y-2 relative">
+              <Label htmlFor="password">Mật khẩu</Label>
               <Input
                 id="password"
-                type="password"
+                type={showPassword ? "text" : "password"}
                 name="password"
                 required
                 value={formData.password}
                 onChange={handleChange}
               />
+              <div
+                className="absolute right-2 top-8 cursor-pointer"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <AiFillEyeInvisible className="h-6 w-6 text-gray-500" />
+                ) : (
+                  <AiFillEye className="h-6 w-6 text-gray-500" />
+                )}
+              </div>
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="confirm-password">Confirm Password</Label>
+
+            {/* Xác nhận mật khẩu với biểu tượng con mắt */}
+            <div className="space-y-2 relative">
+              <Label htmlFor="confirm-password">Xác nhận mật khẩu</Label>
               <Input
                 id="confirm-password"
-                type="password"
+                type={showConfirmPassword ? "text" : "password"}
                 name="confirmPassword"
                 required
                 value={formData.confirmPassword}
                 onChange={handleChange}
               />
+              <div
+                className="absolute right-2 top-8 cursor-pointer"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? (
+                  <AiFillEyeInvisible className="h-6 w-6 text-gray-500" />
+                ) : (
+                  <AiFillEye className="h-6 w-6 text-gray-500" />
+                )}
+              </div>
             </div>
+
             {error && <p className="text-red-500">{error}</p>}
             <Button type="submit" className="w-full">
-              Register
+              Đăng ký
             </Button>
           </form>
         </div>

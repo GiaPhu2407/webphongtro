@@ -10,6 +10,7 @@ import Footer from "@/components/component/Footer";
 import Content from "@/components/component/ListLiKe/Content";
 import { Header } from "@/components/component/header";
 import Link from "next/link";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai"; // Thay thế Heroicons bằng React Icons
 
 export default function LoginPage() {
   const router = useRouter();
@@ -20,6 +21,9 @@ export default function LoginPage() {
 
   const [error, setError] = useState("");
   const { toast } = useToast();
+
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -103,6 +107,16 @@ export default function LoginPage() {
                 value={formData.password}
                 onChange={handleChange}
               />
+              <div
+                className="absolute right-2 top-8 cursor-pointer"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <AiFillEyeInvisible className="h-6 w-6 text-gray-500" />
+                ) : (
+                  <AiFillEye className="h-6 w-6 text-gray-500" />
+                )}
+              </div>
             </div>
             <Link
               href={"/ShowForgotPass"}
