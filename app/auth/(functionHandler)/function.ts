@@ -1,4 +1,5 @@
-import { TestCase } from "../../../constants/data";
+// File: @/app/auth/(functionHandler)/function.ts
+
 export const registerUser = async (userData: any) => {
   try {
     const response = await fetch("/api/register", {
@@ -8,44 +9,30 @@ export const registerUser = async (userData: any) => {
       },
       body: JSON.stringify(userData),
     });
+
     const data = await response.json();
+
     if (response.ok) {
-      console.log("User created:", data);
+      console.log("User registered successfully:", data);
+      return { status: true, data };
     } else {
-      console.error("Error:", data);
+      console.error("Registration error:", data.error);
+      return { status: false, error: data.error };
     }
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error during registration:", error);
+    return { status: false, error: "Đã xảy ra lỗi trong quá trình đăng ký." };
   }
 };
 
-export const getAllUsers = async () => {
+export const loginUser = async (email: string, password: string) => {
   try {
-    const response = await fetch("/api/getUsers", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await response.json();
-    if (response.ok) {
-      console.log(data);
-    } else {
-      console.error("Error:", data);
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }
-};
-
-export const loginUser = async (username: string, password: string) => {
-  try {
-    const res = await fetch("http://localhost:3000/api/login", {
+    const res = await fetch("/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
     });
 
     if (res.ok) {
@@ -59,27 +46,6 @@ export const loginUser = async (username: string, password: string) => {
     return { status: false };
   }
 };
-export const callTest = async (item: any) => {
-  const response = await fetch("/api/test", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(item),
-  });
-  const data = await response.json();
-  if (response.ok) {
-    return {
-      status: "PASSED",
-      data,
-    };
-  } else {
-    return {
-      status: "FAILED",
-      data,
-    };
-  }
-};
 
 export const checkUniqueEmail = async (email: string) => {
   try {
@@ -89,10 +55,62 @@ export const checkUniqueEmail = async (email: string) => {
         "Content-Type": "application/json",
       },
     });
+
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Lỗi khi gọi API kiểm tra email:", error);
-    return null;
+    console.error("Error checking email uniqueness:", error);
+    return { status: false };
+  }
+};
+
+export const getUserProfile = async (userId: number) => {
+  try {
+    const response = await fetch(`/api/user/${userId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      return { status: true, data };
+    } else {
+      return { status: false, error: data.error };
+    }
+  } catch (error) {
+    console.error("Error fetching user profile:", error);
+    return {
+      status: false,
+      error: "Đã xảy ra lỗi khi truy xuất thông tin người dùng.",
+    };
+  }
+};
+
+export const updateUserProfile = async (userId: number, userData: any) => {
+  try {
+    const response = await fetch(`/api/user/${userId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      return { status: true, data };
+    } else {
+      return { status: false, error: data.error };
+    }
+  } catch (error) {
+    console.error("Error updating user profile:", error);
+    return {
+      status: false,
+      error: "Đã xảy ra lỗi khi cập nhật thông tin người dùng.",
+    };
   }
 };

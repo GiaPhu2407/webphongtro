@@ -1,3 +1,5 @@
+// File: pages/api/register.js
+
 import { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
 import { hashPassword } from "@/utils/hashPassword";
@@ -8,41 +10,71 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === "POST") {
-    const { name, username, email, password, phoneNumber, gender } = req.body;
+  if (req.method !== "POST") {
+    res.setHeader("Allow", ["POST"]);
+    return res
+      .status(405)
+      .json({ error: `Method ${req.method} is not allowed` });
+  }
 
-    try {
-      // Kiểm tra xem email đã tồn tại chưa
-      const existingUser = await prisma.user.findUnique({
-        where: { email },
-      });
+  const { name, username, email, password, phoneNumber, gender } = req.body;
 
-      // Nếu email đã tồn tại, trả về lỗi
-      if (existingUser) {
-        return res.status(400).json({ error: "Email đã tồn tại" });
-      }
+  // Validate required fields
+  if (!name || !username || !email || !password || !phoneNumber || !gender) {
+    return res.status(400).json({ error: "Vui lòng điền đầy đủ thông tin" });
+  }
 
-      // Băm mật khẩu
-      const hashedPassword = await hashPassword(password);
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ error: "Email không hợp lệ" });
+  }
 
-      // Tạo người dùng mới
-      const user = await prisma.user.create({
-        data: {
-          name,
-          username,
-          email,
-          password: hashedPassword,
-          phoneNumber,
-          gender,
-        },
-      });
+  // Validate phone number format
+  const phoneRegex = /^\+?[0-9]{10,15}$/;
+  if (!phoneRegex.test(phoneNumber)) {
+    return res.status(400).json({ error: "Số điện thoại không hợp lệ" });
+  }
 
-      res.status(201).json(user);
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: "Lỗi server" });
+  try {
+    // Check if email already exists
+    const existingUserByEmail = await prisma.user.findUnique({
+      where: { email },
+    });
+
+    if (existingUserByEmail) {
+      return res.status(400).json({ error: "Email đã tồn tại" });
     }
-  } else {
-    res.status(405).json({ error: "Method not allowed" });
+
+    // Check if username already exists
+    const existingUserByUsername = await prisma.user.findFirst({
+      where: { username },
+    });
+
+    if (existingUserByUsername) {
+      return res.status(400).json({ error: "Tên tài khoản đã tồn tại" });
+    }
+
+    // Hash password
+    const hashedPassword = await hashPassword(password);
+
+    // Create new user
+    const newUser = await prisma.user.create({
+      data: {
+        name,
+        username,
+        email,
+        password: hashedPassword,
+        phoneNumber,
+        gender,
+      },
+    });
+
+    // Return user without password
+    const { password: _, ...userWithoutPassword } = newUser;
+    return res.status(201).json(userWithoutPassword);
+  } catch (error) {
+    console.error("Registration error:", error);
+    return res.status(500).json({ error: "Lỗi server khi đăng ký tài khoản" });
   }
 }
