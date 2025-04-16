@@ -15,6 +15,7 @@ interface Post {
 }
 
 const Header = () => {
+  
   // State to store input values
   const [price, setPrice] = useState("");
   const [area, setArea] = useState("");

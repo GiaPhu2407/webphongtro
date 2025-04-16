@@ -1,10 +1,24 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { VscAccount } from "react-icons/vsc";
 import { GrLogin } from "react-icons/gr";
 
 import { FaRegHeart } from "react-icons/fa";
 import Link from "next/link";
 const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+  // const { userId } = useAuth();
+  const [userData, setUserData] = useState<any>();
+  useEffect(() => {
+    setUserData(JSON.parse(localStorage.getItem("userData") as string));
+  }, []);
+  function onLogout() {
+    localStorage.removeItem("userData");
+    setUserData(undefined);
+  }
   return (
     <div>
       <div className="flex ml-10 gap-20 mt-1 justify-center items-center">
